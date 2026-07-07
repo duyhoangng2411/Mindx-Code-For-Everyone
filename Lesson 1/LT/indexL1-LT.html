@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Thẻ tiêu đề  -->
+    
+    <!-- Tiêu đề chính  -->
+    <h1>Facebook</h1>
+    
+    <!-- Tiêu đề phụ  -->
+    <h2>Instagram</h2>
+
+    <!-- Tiêu đề thấp hơn h3 - h6  -->
+    <h3>Twitter</h3>
+    <h4>LinkedIn</h4>
+    <h5>YouTube</h5>
+    <h6>Reddit</h6>
+
+    <!-- Thẻ đoạn văn bản  -->
+    <p>This is a simple paragraph.</p>
+
+    <!-- Thẻ phân chia nội dung <span> </span> -->
+    <!-- giúp điều chỉnh các style của một số nội dung nhỏ  -->
+    <p>This is a paragraph with a <span>highlighted</span> section.</p>
+
+    <!-- Thẻ tạo liên kết link (anchor tag)  -->
+    <a href="https://www.facebook.com">Visit Facebook</a>
+
+    <!-- Nhóm thẻ định dạng văn bản (style tags)  -->
+    
+    <!-- Làm cho văn bản đậm không có ngữ nghĩa (<b> và có ngữ nghĩa <strong>) -->
+    <p>Đây là <b>Duy</b>và<strong>Joe</strong>.</p>
+
+    <!-- Làm cho văn bản nghiêng không có ngữ nghĩa (i) và có ngữ nghĩa (em) -->
+    <p>Đây là <i>Duy</i>và<em>Joe</em>.</p>
+
+    <!-- Làm cho văn bản có đường gạch chân  -->
+    <p>Đây là <u>Duy</u>.</p>
+
+    <!-- Nhóm thẻ danh sách (list tags) -->
+    
+    <!-- Danh sách không có thứ tự (unordered list)-->
+    
+    <ul>
+        <li>Cá</li>
+        <li>Thỏ</li>
+        <li>Gà</li>
+    </ul>
+
+    <!-- Danh sách có thứ tự (ordered list) -->
+    
+    <ol>
+        <li>Thịt cừu</li>
+        <li>Thịt bò</li>
+        <li>Thịt heo</li>
+    </ol>
+
+    <!-- Nhóm thẻ media (media tags) -->
+    
+    <!-- *Thẻ không có thẻ đóng, chỉ có thể thẻ mở: Self Closing Tag
+    Thay vì thẻ đóng, dấu / ở trước tên thẻ, thì thẻ này sẽ được đặt ở sau tên thẻ  -->
+
+    <!-- Thẻ hình ảnh (image tag) <img>  -->
+    <img src="image.jpg" alt="Description of the image">
+
+    <!-- Thẻ video (video tag) <video> -->
+    <video src="video.mp4" controls>Your browser does not support the video tag.</video>
+
+    <!-- Thẻ audio (audio tag) <audio>  -->
+    <audio src="audio.mp3" controls>Your browser does not support the audio tag.</audio>
+
+    <!-- Nhóm thẻ bảng (table tags)  -->
+    
+    <!-- 
+    tr là table row, (hàng trong bảng)
+    th là table header, bao nhiêu th là bao nhiêu cột (cột tiêu đề)
+    td là table data, bao nhiêu th là bao nhiêu cột (cột dữ liệu)-->
+    <table border="1">
+        <tr>
+            <th>Họ và tên</th>
+            <th>Điện thoại</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>123-456-7890</td>
+            <td>john.doe@example.com</td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>987-654-3210</td>
+            <td>jane.smith@example.com</td>
+        </tr>
+    </table>
+
+    <!-- Nhóm thẻ biểu mẫu (form tags) -->
+    <!-- Thành phần: dữ liệu (input) và submit (nút gửi dữ liệu) -->
+    
+    <form action="/submit" method="post">
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Điện thoại:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <input type="submit" value="Gửi">
+    </form>
+
+</body>
+</html>

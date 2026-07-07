@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal CSS Example</title>
+    <!-- Viết mã nguốn CSS vào thẻ <style> trong thẻ <head> của HTML  -->
+    
+    <style>
+        /* Độ ưu tiên của CSS cao nhất tới thấp nhất: Inline > ID > Class > Element  */
+        /*selector element*/
+        h3{
+            color: red;
+            text-transform: uppercase;
+            background-color: yellow;
+            font-size: 20px;
+            cursor: progress;
+        }
+        p1{
+            color: yellow;
+            background-color: red;
+        }
+
+        /*selector class*/
+        .start-up{
+            color: blue;
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+        .study{
+            color: green;
+            text-transform: lowercase;
+            font-size: 25px;
+        }
+
+        /*selector id*/
+        #tuananh{
+            color: orange;
+            text-transform: capitalize;
+            font-size: 30px;
+        }
+
+        /*selector group*/
+        p.doctor{
+            color: blue;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h3>Nguyễn Văn A</h3>
+    <h3>Lê Tuấn Anh</h3>
+    <h3>Phan Văn Anh</h3>
+
+    <p1>Nguyễn Hoàng Duy</p1>
+    <p2>Lê Thị B</p2>
+
+    <h2 class="start-up">Nguyễn Văn A</h2>
+    <h2 class="study">Lê Tuấn Anh</h2>
+    <h2 class="study">Phan Văn Anh</h2>
+
+    <h3 id="tuananh" class="start-up">Nguyễn Văn A</h3>
+    <h3 class="study">Lê Tuấn Anh</h3>
+    <h3 class="study">Phan Văn Anh</h3>
+
+    <h4 class="doctor">Duy Nguyễn</h4>
+    <p class="doctor">Lê Thị C</p>
+
+</body>
+</html>

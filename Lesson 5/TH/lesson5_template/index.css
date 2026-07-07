@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+}
+
+.container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* top right bottom left */
+  padding: 16px 0px;
+  background-color: rgb(183, 114, 114);
+}
+
+.container .header .menu {
+  display: flex;
+  gap: 20px;
+}
+
+.container .mainContent .box1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .mainContent .box1 .rightContent .listImage .groupImage img {
+  height: 300px;
+}
+
+.container .mainContent .box1 .rightContent .listImage .image img {
+  height: 400px;
+}
+
+.container .mainContent .box1 .rightContent .listImage img {
+  border-radius: 16px;
+}
+
+.container .mainContent .box1 .rightContent .listImage {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.container .mainContent .box1 .rightContent .listImage .groupImage {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.container .mainContent .box2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.container .mainContent .box2 .rightContent {
+  display: flex;
+  gap: 8px;
+}
+
+.container .mainContent .box2 .rightContent .miniBox {
+  border: 1px solid black;
+}
+
+/* Example breakpoints for mobile, tablet, and desktop */
+
+@media (max-width: 600px) {
+  
+  .container .header .menu, .container .header .auth{
+    display: none;
+  }
+
+  .container .header .iocnmenu{
+    order: 1;
+  }
+
+  .container .header .logo{
+    order: 0;
+  }
+
+  .container .mainContent .box1{
+    flex-direction: column;
+  }
+
+  .container .mainContent .box1 .rightContent{
+    order: 0;
+  }
+
+  .container .mainContent .box1 .leftContent{
+    order: 1;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .container .header .menu{
+    display: none;
+  }
+
+  .container .header .iocnmenu{
+    order: 0;
+  }
+
+  .container .header .logo{
+    order: 1;
+  }
+  
+  .container .header .auth{
+    order: 2;
+  }
+
+  .container .mainContent .box1{
+    flex-direction: column;
+  }
+
+  .container .mainContent .box1 .rightContent{
+    order: 0;
+  }
+
+  .container .mainContent .box1 .leftContent{
+    order: 1;
+  }
+}
+
+@media (min-width: 901px) {
+  body {
+    font-size: 18px;
+  }
+}
