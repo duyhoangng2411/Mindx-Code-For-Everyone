@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4-LT</title>
+<style>
+    .block-element{
+    display: block;
+    }
+    /* display: block; 
+    chiếm toàn bộ của dòng từ trái sang phải
+    => cài đặt width, height, margin, padding
+    => đẩy các phần tử khác xuống dòng tiếp theo */
+    
+    .inline-element{
+    display: inline;
+    }
+    .test-inline{
+    display: inline;
+    }
+    /* display: inline;
+    chiếm kích thước vừa bằng nội dung của nó
+    => ko thể cài đặt width, height
+    => margin chỉ nhận left and right */
+
+
+    .inline-block-element{
+    display: inline-block;
+    }
+    /* display: inline-block;
+    Cho phép phần tử nằm trên cùng một dòng với các phần tử khác có chứa inline, 
+    nhưng vẫn có thể điều chỉnh kích thước như một block element.
+    => cài đặt width, height, margin, padding
+    */
+
+    .none-element {
+    display: none;
+    }
+    /* display: none;
+    Ẩn phần tử khỏi trang web.
+    */
+
+
+</style>
+
+</head>
+<body>
+    <div class="block-element">Block Element</div>
+    <span class="inline-element">Inline Element</span>
+    <div class="test-inline">Test display inline</div>
+    <div class="inline-block-element">Inline-Block Element</div>
+    <div class="none-element">This will not be displayed</div>
+</body>
+</html>

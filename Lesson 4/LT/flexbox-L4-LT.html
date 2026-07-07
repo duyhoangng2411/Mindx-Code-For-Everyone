@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+
+        .parent-box {
+            display: flex;
+            flex-direction: column; 
+            /* flex-direction: 
+            row;
+            column-reverse;
+            row-reverse;*/
+
+            justify-content: flex-start;
+            /* trục chính
+            justify-content: 
+            flex-end; căn về cuối
+            center; căn giữa
+            space-between;
+            space-around;
+            space-evenly;*/
+
+            align-content: flex-start;
+            /* trục phụ
+            align-content: 
+            flex-end; căn về cuối
+            center; căn giữa
+            space-between;
+            space-around;
+            space-evenly;*/
+
+            flex-wrap: nowrap;
+            /* flex-wrap:
+            wrap; cho phép xuống dòng
+            wrap-reverse; cho phép xuống dòng ngược */
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 20px;
+        }
+
+        .box1 {
+            background-color: red;
+            order: 2;
+            /* order: sắp xếp thú tự */
+        }
+
+        .box2 {
+            background-color: green;
+            order: 1;
+            align-self: flex-end;
+            /* align-self: căn chỉ 1 mình nó*/
+        
+        }
+        .box3 {
+            background-color: blue;
+            order: 3;
+            flex: 1;
+            /* flex: 1; chiếm phần dư của phần tử parent*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent-box">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+    </div>
+</body>
+</html>
