@@ -1,8 +1,13 @@
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
 /* SM: ≥640px */
 @media (min-width: 640px) {
   /* Code cho các thiết bị từ 640px trở lên */
 body {
-    font-size: 14px;
+    font-size: 20px;
 }
 }
 
@@ -10,7 +15,7 @@ body {
 @media (min-width: 768px) {
   /* Code cho các thiết bị từ 768px trở lên */
 body {
-    font-size: 16px;
+    font-size: 24px;
 }
 }
 
@@ -18,7 +23,11 @@ body {
 @media (min-width: 1024px) {
   /* Code cho các thiết bị từ 1024px trở lên */
 body {
-    font-size: 18px;
+    font-size: 28px;
+}
+.box {
+    display: flex;
+    flex-direction: row;
 }
 }
 
@@ -26,7 +35,7 @@ body {
 @media (min-width: 1280px) {
   /* Code cho các thiết bị từ 1280px trở lên */
 body {
-    font-size: 20px;
+    font-size: 32px;
 }
 }
 
@@ -34,6 +43,11 @@ body {
 @media (min-width: 1536px) {
   /* Code cho các thiết bị từ 1536px trở lên */
 body {
-    font-size: 22px;
+    font-size: 36px;
 }
 }
+
+/* min-width (mobile first)
+từ điện thoại đến máy tính để bàn, ưu tiên thiết kế cho điện thoại trước, sau đó mở rộng cho các thiết bị lớn hơn */
+/* max-width (desktop first)
+từ máy tính để bàn đến điện thoại, ưu tiên thiết kế cho máy tính để bàn trước, sau đó thu nhỏ cho các thiết bị nhỏ hơn */
