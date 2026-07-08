@@ -66,9 +66,21 @@
 // console.log("🚀 ~ nhiPhan:", nhiPhan.split("").reverse().join(``))
 
 // 6. Sử dụng vòng lặp, thực hiện tính phép tính sau với n là số nguyên:
-const n = 5;
-let sqrt = 0
-for(let i = 1; i <= n; i++){
-    sqrt = Math.sqrt(i + sqrt)
-}
+// const n = 5;
+// let sqrt = 0
+// for(let i = 1; i <= n; i++){
+//     console.log(`sqrt = Math.sqrt(${i} + ${sqrt}):`, Math.sqrt(i + sqrt));
+//     sqrt = Math.sqrt(i + sqrt)
+// }
+// console.log("🚀 ~ sqrt:", sqrt)
 
+// 7. 
+// const n = 5;
+// let sqrt = 0
+// for(let i = n; i >= 1; i--){ // bước lặp từ 5 tới 1
+//     console.log(`sqrt = Math.sqrt(${i} + ${sqrt}):`, Math.sqrt(i + sqrt));
+//     sqrt = Math.sqrt(i + sqrt)
+// }
+// console.log("🚀 ~ sqrt:", sqrt)
+
+// 8. 

@@ -63,10 +63,44 @@ console.log("🚀 ~ isMax:", isMax)
 // 7.Viết 1 ct JS để so sánh hai chuỗi nhập từ
 // người dùng và trả về true nếu chương trình
 // giống nhau, ngược lại trả về false.
-
 const str = "Tôi là Duy"
 const compareStr = "Tôi là Duy"
 // Toán tử 3 ngôi (L7) 
 const compareResult = str == compareStr ? console.log("Bằng nhau") : console.log("Không bằng nhau");
 
+// 8. Viết 1 ct JS kiểm tra số dương nhập vào bàn phím. 
+// const soDuong = 10;
+// C1
+// if (soDuong > 0){
+//     console.log("Đây là số dương");
+// }
+// else{
+//     console.log("Đây không phải là số dương");
+// }
 
+// C2
+// soDuong ? console.log("Số dương") : console.log("Số không dương");
+
+// 9. Viết 1 ct JS kiểm tra năm nhuận
+const nam = 2026;
+if (nam % 400 == 0){
+    console.log("Đây là năm nhuận");
+}
+else if(nam % 4 == 0 && nam % 100 == 0){
+    console.log("Đây là năm nhuận");
+}
+else{
+    console.log("Đây không phải là năm nhuận");
+}
+
+// 10. Viết 1 ct JS để so sánh 2 thời gian (giờ và
+//phút) nhập từ người dùng và về true nếu thời gian
+//thứ nhất muộn hơn thời gian thứ 2.
+const hour1 = 23
+const minute1 = 30
+//23:30
+const hour2 = 20
+const minutes2 = 30
+//20:30
+const checkGreaterTime = hour1 > hour2 ? true : minute1 > minutes2 ? true : false
+console.log("🚀 ~ checkGreaterTime:", checkGreaterTime)
