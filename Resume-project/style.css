@@ -1,10 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 .body{
     width: 1280px;
     height: 3818.6px;
     padding-top: 128px;
     padding-bottom: 79.99px;
 }
-
 
 /* nav-bar */
 .nav-bar-holder{
@@ -16,7 +20,7 @@
 }
 
 .nav-bar{
-    width: 1200px;
+    width: 100%;
     height: 64px;
     padding-left: 24px;
     padding-right: 24px;
@@ -44,15 +48,15 @@
     width: 363.83px;
     height: 20px;
     font-size: 14px;
-
+    
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
 }
-/* general */
 
+/* general */
 .general{
     width: 1152px;
     height: 349.39px;
@@ -158,7 +162,6 @@ span{
     font-style: normal;
     font-size: 20px;
     line-height: 28.8px;
-    alignment-baseline: middle;
 }
 
 
