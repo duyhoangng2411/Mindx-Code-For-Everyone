@@ -1,18 +1,19 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.body{
+/* .body{
     width: 1280px;
     height: 3818.6px;
     padding-top: 128px;
     padding-bottom: 79.99px;
-}
+} */
 
 /* nav-bar */
 .nav-bar-holder{
-    width: 1280px;
+    width: 100%;
     height: 65px;
     border-bottom: 1px solid #D4C2C3;
     padding-left: 40px;
@@ -58,10 +59,11 @@
 
 /* general */
 .general{
-    width: 1152px;
+    width: 100%;
     height: 349.39px;
     padding-bottom: 80px;
     padding-top: 40px;
+    padding-left: 40px;
 
     display: flex;
     gap: 40px;
@@ -168,16 +170,16 @@ span{
 /* .about-me */
 
 .aboutme-holder{
-    width: 1280px;
+    width: 100%;
     height: 528px;
     padding: 80px 40px 80px 40px;
     background-color: #F3F3F6;
 }
 
 .about-me{
-    width: 1200px;
+    width: 100%;
     height: 369px;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     gap: 48px;
 
     display: flex;
@@ -186,7 +188,7 @@ span{
 }
 
 .abt1{
-    width: 1200px;
+    width: 100%;
     height: 86px;
     gap: 7px;
 
@@ -221,7 +223,7 @@ span{
 }
 
 .p1{
-    width: 1200px;
+    width: 100%;
     height: 234px;
     gap: 40px;
 
@@ -229,7 +231,7 @@ span{
 }
 
 .bg{
-    width: 580px;
+    width: 100%;
     height: 199.75px;
     gap: 24px;
 
@@ -259,7 +261,7 @@ span{
 }
 
 .edu-goal{
-    width: 580px;
+    width: 100%;
     height: 234px;
     border-radius: 8px;
     border-color: #D4C2C3;
@@ -281,7 +283,7 @@ span{
 
 }
 .bl{
-    width: 530px;
+    width: 100%;
     height: 48px;
     gap: 16px;
 
@@ -343,9 +345,9 @@ span{
 /* .SKILLS */
 
 .SKILLS{
-    width: 1200px;
+    width: 100%;
     height: 488px;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     padding: 80px 24px 80px 24px;
     gap: 64px;
 
@@ -356,7 +358,7 @@ span{
 
 
 .tieude-skill{
-    width: 1152px;
+    width: 100%;
     height: 86px;
     gap: 7px;
 
@@ -396,7 +398,7 @@ span{
 }
 
 .SKILL-HOLDERS{
-    width: 1152px;
+    width: 100%;
     height: 178px;
     gap: 24px;
 
@@ -626,7 +628,7 @@ span{
 /* career  */
 
 .career{
-    width: 1280px;
+    width: 100%;
     height: 837.99px;
     padding: 80px 40px 80px 40px;
     background-color: #F3F3F6;
@@ -1289,7 +1291,7 @@ span{
 /* portfolio  */
 
 .portfolio{
-    width: 1280px;
+    width: 100%;
     height: 802.02px;
     padding: 80px 40px 80px 40px;
 
@@ -1734,9 +1736,9 @@ span{
 /* contacr  */
 
 .contact{
-    width: 1152px;
+    width: 100%;
     height: 605.21px;
-    padding-top: 80.01px; 
+    /* padding-top: 80.01px;  */
     gap: 40px;
 
     display: flex;
@@ -2104,7 +2106,7 @@ span{
 /* footer  */
 
 .footer{
-    width: 1280px;
+    width: 100%;
     height: 122.59px;
     border-top: 1px;
     padding: 48px 40px 48px 40px;
