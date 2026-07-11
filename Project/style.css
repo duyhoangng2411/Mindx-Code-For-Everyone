@@ -29,7 +29,7 @@ body {
 }
 
 .mid-nav a {
-    /* font-family: 'Exo'; */
+    font-family: 'Exo', sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 16px;
@@ -47,10 +47,10 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-around; */
+    justify-content: space-around;
 }
 .right-nav a {
-    /* font-family: 'Jost'; */
+    font-family: 'Jost',sans-serif;
     font-weight: 500;
     font-style: Medium;
     font-size: 18px;
@@ -65,48 +65,15 @@ body {
 .intro {
     width: 100%;
     height: 700px;
-    background: linear-gradient(97.77deg, #FFF5BE 0%, #D0F7EA 97.73%);
-}
-.in1 {
-    width: 300px;
-    position: absolute;
-    left: 50px;
-    opacity: 90%;
-}
-.in-bo {
-    position: relative;
-    width: 643px;
-    height: 448px;
-    top: 252px;
-}
-.in-to {
-    position: relative;
-    width: 500px;
-    left: 374px;
-    top: -220px;
-    opacity: 20%;
-}
-.girl {
-    width: 696px;
-    height: 700px;
-    opacity: 1;
-    position: absolute;
-    top: 72px;
-    left: 600px;
-    z-index: 1;
-}
-.on-sc {
-    height: 419px;
-    width: 830px;
-    position: absolute;
-    top: 200px;
-    left: 460px;
-    opacity: 50%;
+    background-image: url(./images/intro/back-intro.png);
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-size: cover; /* Phóng to ảnh vừa vặn toàn bộ khung */
+    background-position: center; /* Canh giữa ảnh */
 }
 .in-de {
     width: 520px;
     height: 262px;
-    position: absolute;
+    position: relative;
     top: 219px;
     left: 150px;
     display: flex;
@@ -115,7 +82,7 @@ body {
     gap: 24px;
 }
 .in-de p {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 50px;
@@ -133,7 +100,7 @@ body {
     gap: 20px;
 }
 .detail p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -156,7 +123,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 500;
     font-style: Medium;
     font-size: 18px;
@@ -173,7 +140,7 @@ body {
     display: flex;
     flex-direction: column;
     gap:50px;
-    margin-top: 60px;
+    margin-top: 100px;
 }
 .cate-nav {
     width: 1290px;
@@ -188,7 +155,7 @@ body {
     gap: 12px;
 }
 .cate-td h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 32px;
@@ -200,7 +167,7 @@ body {
 }
 
 .cate-td p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -219,7 +186,7 @@ body {
     justify-content: center;
     gap: 10px;
 
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 500;
     font-style: Medium;
     font-size: 18px;
@@ -229,6 +196,7 @@ body {
     letter-spacing: 0%;
     text-transform: capitalize;
     color: #000000;
+    white-space: nowrap;
 }
 .cate-con {
     width: 1290px;
@@ -258,7 +226,7 @@ body {
     gap: 12px;
 }
 .AD-con h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -267,9 +235,10 @@ body {
     letter-spacing: 0%;
     text-transform: capitalize;
     color: black;
+    white-space: nowrap;
 }
 .AD-con p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -298,7 +267,7 @@ body {
     gap: 12px;
 }
 .Dev-con h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -309,7 +278,7 @@ body {
     color: black;
 }
 .Dev-con p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -338,7 +307,7 @@ body {
     gap: 12px;
 }
 .Com-con h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -349,7 +318,7 @@ body {
     color: black;
 }
 .Com-con p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -378,7 +347,7 @@ body {
     gap: 12px;
 }
 .Video-con h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -389,7 +358,7 @@ body {
     color: black;
 }
 .Video-con p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -418,7 +387,7 @@ body {
     gap: 12px;
 }
 .Photo-con h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -429,7 +398,7 @@ body {
     color: black;
 }
 .Photo-con p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -458,7 +427,7 @@ body {
     gap: 12px;
 }
 .Mar-con h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -469,7 +438,7 @@ body {
     color: black;
 }
 .Mar-con p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -498,7 +467,7 @@ body {
     gap: 12px;
 }
 .Con-con h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -510,7 +479,7 @@ body {
     white-space: nowrap;
 }
 .Con-con p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -539,7 +508,7 @@ body {
     gap: 12px;
 }
 .Fin-con h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -550,7 +519,7 @@ body {
     color: black;
 }
 .Fin-con p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -579,7 +548,7 @@ body {
     gap: 12px;
 }
 .Sci-con h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -590,7 +559,7 @@ body {
     color: black;
 }
 .Sci-con p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -619,7 +588,7 @@ body {
     gap: 12px;
 }
 .Net-con h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -630,7 +599,7 @@ body {
     color: black;
 }
 .Net-con p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -646,7 +615,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 34px;
-    margin-top: 60px;
+    margin-top: 100px;
 }
 .cou-nav {
     width: 1290px;
@@ -661,7 +630,7 @@ body {
     gap: 12px;
 }
 .cou-td h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 32px;
@@ -672,7 +641,7 @@ body {
     color: #000000;
 }
 .cou-td p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -691,7 +660,7 @@ body {
     justify-content: center;
     gap: 10px;
 
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 500;
     font-style: Medium;
     font-size: 18px;
@@ -707,8 +676,10 @@ body {
     height: 994px;
     display: flex;
     flex-direction: row;
+    gap: 30px;
     flex-wrap: wrap;
 }
+/* p1 */
 .cou-p1 {
     width: 410px;
     height: 474px;
@@ -734,7 +705,7 @@ body {
     gap: 12px;
 }
 .p1-td p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 16px;
@@ -744,7 +715,7 @@ body {
     vertical-align: middle;
 }
 .p1-td h1 {
-    font-family: Exo;
+    font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-style: SemiBold;
     font-size: 20px;
@@ -768,7 +739,7 @@ body {
     gap: 8px;
 }
 .p1-ti p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 16px;
@@ -786,7 +757,7 @@ body {
     gap: 8px;
 }
 .p1-stu p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 16px;
@@ -817,7 +788,7 @@ body {
     gap: 8px;
 }
 .p1-fee p {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
@@ -829,7 +800,7 @@ body {
     color:#9D9D9D ;
 }
 .p1-fee span {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 500;
     font-style: Medium;
     font-size: 18px;
@@ -841,7 +812,7 @@ body {
     color:#55BE24 ;
 }
 .p1-see {
-    font-family: Jost;
+    font-family: 'Jost',sans-serif;
     font-weight: 500;
     font-style: Medium;
     font-size: 18px;
@@ -853,5 +824,613 @@ body {
     text-transform: capitalize;
     text-decoration: none;
     color:#000000 ;
+}
+/* P2 */
+.cou-p2 {
+    width: 410px;
+    height: 474px;
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    flex-direction: column;
+}
+.cou-p2-de {
+    width: 410px;
+    height: 224px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.p2-td {
+    width: 370px;
+    height: 84px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.p2-td p {
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+.p2-td h1 {
+    font-family: 'Exo',sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color:#000000 ;
+}
+.p2-am {
+    width: 214px;
+    height: 24px;
+    display: flex;
+    gap: 24px;
+}
+.p2-ti {
+    width: 78px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.p2-ti p {
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:#555555 ;
+}
+.p2-stu {
+    width: 78px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.p2-stu p {
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:#555555 ;
+    white-space: nowrap;
+}
+.line1 {
+    width: 370px;
+    height: 1px;
+    background-color: #EAEAEA;
+}
+.p2-fee-holder {
+    width: 370px;
+    height: 27px;
+    display: flex;
+    justify-content: space-between;
+}
+.p2-fee {
+    width: 89px;
+    height: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.p2-fee p {
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-decoration: line-through;
+    color:#9D9D9D ;
+}
+.p2-fee span {
+    font-family: 'Jost',sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color:#F51A1A ;
+}
+.p2-see {
+    font-family: 'Jost',sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: right;
+    vertical-align: middle;
+    text-transform: capitalize;
+    text-decoration: none;
+    color:#000000 ;
+}
+/* advertise */
+.ad-holder {
+    width: 1290px;
+    height: 324px;
+    border-radius: 20px;
+    margin-top: 100px;
+    background-image: url(./assets/adver/image.png);
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-size: cover; /* Phóng to ảnh vừa vặn toàn bộ khung */
+    background-position: center; /* Canh giữa ảnh */
+}
+.ad-text {
+    width: 450px;
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    top: 49px;
+    left: 100px;
+
+}
+.ad-td {
+    width: 450px;
+    height: 69px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.ad-td p {
+    font-family: 'Exo',sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #555555;
+}
+.ad-td h1 {
+    font-family: 'Exo',sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 32px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color:#000000 ;
+}
+.ad-de {
+    width: 450px;
+    height: 122px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ad-de p {
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color:#555555 ;
+}
+.ex-co {
+    width: 177px;
+    height: 48px;
+    border-radius: 24px;
+    padding: 10px 24px;
+    background: var(--Primary, #FF782D);
+
+    font-family: 'Jost',sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 17px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color:#FFFFFF ;
+    text-decoration: none;
+}
+/* Estimate  Numbers */
+.es-nu {
+    width: 1290px;
+    height: 181px;
+    margin-top: 100px;
+    display: flex;
+    gap: 30px;
+}
+.AS {
+    width: 300px;
+    height: 181px;
+    border-radius: 20px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: var(--White_grey, #F5F5F5);
+}
+.AS h1 {
+    font-family: 'Exo',sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 32px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #FF782D;
+}
+.AS p {
+    font-family: 'Jost',sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #000000;
+}
+/* Grow */
+.grow-holder {
+    width: 1289;
+    height: 469px;
+    display: flex;
+    gap: 125px;
+    margin: 100px;
+}
+.grow{
+    width: 520px;
+    height: 384px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.grow-td {
+    font-family: 'Exo',sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 32px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #000000;
+}
+.grow-de {
+    width: 520px;
+    height: 284px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.grow-detail {
+    width: 520px;
+    height: 216px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.grow-detail p {
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color:#555555 ;
+}
+.cer {
+    width: 520px;
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.cer1{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:#000000 ;
+}
+/* theme */
+.theme-holder {
+    width: 1290px;
+    height: 300px;
+    display: flex;
+    gap: 10px;
+    background-image: url(./images/theme/theme.png);
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-size: cover; /* Phóng to ảnh vừa vặn toàn bộ khung */
+    background-position: center; /* Canh giữa ảnh */
+    /* margin-top: 100px; */
+}
+.theme-de {
+    width: 600px;
+    height: 188px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    top: 50px;
+    left: 335px
+
+}
+.theme-de-td {
+    width: 429px;
+    height: 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.theme-de-td p {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    color:#000000 ;
+}
+.theme-de-td h1 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 32px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    color: black;
+}
+.theme-detail {
+    width: 536px;
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.theme-detail p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 17px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: black;
+}
+/* feedbacks */
+.fe-holder {
+    width: 1290px;
+    height: 534.8px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+}
+.fe-td {
+    width: 1290px;
+    height: 77px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.fe-td h1 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 32px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    color: black;
+}
+.fe-td p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #555555;
+}
+.fe-de {
+    width: 1290px;
+    height: 407.8px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}.fe1 {
+    width: 300px;
+    height: 407.8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.fe1-1 {
+    width: 240px;
+    height: 238.8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color:#000000 ;
+}
+.fe1-2 {
+    width: 95px;
+    height: 59px;
+    flex-direction: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.fe1-2 h1 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: black;
+    white-space: nowrap;
+}
+.fe1-2 p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: black
+}
+/* wel */
+.wel-holder {
+    width: 1290px;
+    height: 250px;
+    border-radius: 20px;
+    background-image: url(./images/wel.png);
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-size: cover; /* Phóng to ảnh vừa vặn toàn bộ khung */
+    background-position: center; /* Canh giữa ảnh */
+    /* margin-top: 100px; */
+}
+.wel-nav {
+    position: relative;
+    top: -190px;
+    left: 50px;
+    width: 1190px;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+.wel1 {
+    width: 433px;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+.wel1 h1 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color:  black;
+    white-space: nowrap;
+}
+.wel2 {
+    width: 395px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.i-stu {
+    width: 156px;
+    height: 48px;
+    border-radius: 24px;
+    border: 2px solid var(--Primary, #FF782D);
+    padding: 10px 24px;
+
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 17px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #FF782D;
+    text-decoration: none;
+    /* white-space: nowrap; */
+}
+.i-ins {
+    width: 219px;
+    height: 48px;
+    border-radius: 24px;
+    padding: 10px 24px;
+    gap: 10px;
+    background: var(--Primary, #FF782D);
+
+
+    font-family: 'Jost';
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 17px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-decoration: none;
+    /* white-space: nowrap; */
 }
 
