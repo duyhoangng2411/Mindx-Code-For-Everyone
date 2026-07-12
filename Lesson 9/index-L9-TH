@@ -1,0 +1,63 @@
+// Them thuoc tinh moi vao doi tuong
+// const student = {name: "John", age: 20}
+// student.major = "Computer Science"
+// console.log("🚀 ~ student:", student)
+
+// Xoa thuoc tinh trong doi tuong
+// const person = {name:"Alice", age: 25, job:"Design"}
+// delete person.job
+// console.log("🚀 ~ person:", person)
+
+
+//Dem so luong thuoc tinh trong doi tuong
+// const car =  {brand:"Toyota", model:"Camry", year: 2020}
+// let count = 0;
+// for (let key in car) {
+//     console.log("key", key);
+//     count++
+// }
+// console.log("🚀 ~ count:", count)
+
+//Chuyen doi doi tuong thanh mang cac cap key-value
+// const product = { name: "Laptop", price: 1000 }
+
+// Tim kiem doi tuong co name la Camera trong mang san pham
+// const products = [ { name: "Phone", price: 500 }, { name: "Camera", price: 300 }, { name: "Tablet", price: 700 } ]
+// for (let i = 0; i < products.length; i++) {
+//     const item = products[i];
+//     if (item.name === "Camera") {
+//         console.log('Item camera::', item)
+//     }
+// }
+//Loc ra casc san pham co gia lon hon 100
+// const products = [ { name: "Phone", price: 50 }, { name: "Camera", price: 300 }, { name: "Tablet", price: 700 } ]
+// for (let i = 0; i < products.length; i++) {
+//     const item = products[i];
+//     if (item.price > 100) {
+//         console.log('Item camera::', item)
+//     }
+// }
+// Cap nhat gia tri thuoc tinh trong gia tri
+// const person = {name:"Bob", age: 25, job: "Developer"}
+// person.age = 30;
+// console.log("🚀 ~ person:", person)
+
+// Gop hai doi tuong lai voi nhau
+const obj1 = { a: 1, b: 2 }
+const obj2 = { c: 3, d: 4 }
+const result8 = {};
+result8.a = obj1.a;
+result8.b = obj1.b;
+result8.c = obj2.c;
+result8.d = obj2.d;
+console.log("🚀 ~ result8:", result8)
+
+//Duyet qua doi tuong va in ra key-value
+
+// input:animal = { type: "Dog", name: "Buddy", age: 3 }
+const animal = { type: "Dog", name: "Buddy", age: 3 }
+for (let key in animal) {
+    console.log(key + ':' + animal[key])
+}
+//Kiem tra doi tuong co chua thuoc tinh color khong
+const car = { brand: "BMW", model: "X5" }
