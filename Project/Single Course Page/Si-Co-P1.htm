@@ -89,11 +89,11 @@
             <div class="Detail">
                 <div class="Detail1">
                     <div class="Detail1-TD">
-                        <button class="tab-btn active"onclick="openTab(event, 'tab-overview')">Overview</button>
+                        <button id="first" class="tab-btn active"onclick="openTab(event, 'tab-overview')">Overview</button>
                         <button class="tab-btn" onclick="openTab(event, 'tab-curriculum')">Curriculum</button>
                         <button class="tab-btn" onclick="openTab(event, 'tab-instructor')">Instructor</button>
                         <button class="tab-btn" onclick="openTab(event, 'tab-faqs')">FAQs</button>
-                        <button class="tab-btn" onclick="openTab(event, 'tab-reviews')">Reviews</button>
+                        <button id="last" class="tab-btn" onclick="openTab(event, 'tab-reviews')">Reviews</button>
                     </div>
                     <!-- Noi dung hien thi voi tung tab -->
                     <!-- Overview -->
@@ -112,11 +112,14 @@
                                     <div class="Cur-P1-Les">5 Lessons</div>
                                     <div class="Cur-P1-Time">45 Mins</div>
                                 </div>
+                                <!-- Noi dung bi an -->
                                 <div class="Cur-P1-Content">
                                     <div class="Cur-P1-ND">
                                         <div class="DE1">
-                                            <img class="DE1-IMG" src="../assets/cur.png" alt="">
-                                            <p>Lessons with video content</p>
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
                                             <div class="DE1-Time">
                                                 <a href="">Preview</a>
                                                 <p>12:30</p>
@@ -124,8 +127,10 @@
                                             </div>
                                         </div>
                                         <div class="DE1">
-                                            <img class="DE1-IMG" src="../assets/cur.png" alt="">
-                                            <p>Lessons with video content</p>
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
                                             <div class="DE1-Time">
                                                 <a href="">Preview</a>
                                                 <p>12:30</p>
@@ -133,8 +138,10 @@
                                             </div>
                                         </div>
                                         <div class="DE1">
-                                            <img class="DE1-IMG" src="../assets/cur.png" alt="">
-                                            <p>Lessons with video content</p>
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
                                             <div class="DE1-Time">
                                                 <a href="">Preview</a>
                                                 <p>12:30</p>
@@ -142,8 +149,10 @@
                                             </div>
                                         </div>
                                         <div class="DE1">
-                                            <img class="DE1-IMG" src="../assets/cur.png" alt="">
-                                            <p>Lessons with video content</p>
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
                                             <div class="DE1-Time">
                                                 <a href="">Preview</a>
                                                 <p>12:30</p>
@@ -151,55 +160,277 @@
                                             </div>
                                         </div>
                                         <div class="DE1">
-                                            <img class="DE1-IMG" src="../assets/cur.png" alt="">
-                                            <p>Lessons with video content</p>
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
                                             <div class="DE1-Time">
                                                 <a href="">Preview</a>
                                                 <p>12:30</p>
-                                                <img class="DE1-Tick" src="../assets/lock.png" alt="">
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <!-- <div class="Cur-P1">
+                            <!-- Curriculum 2 -->
+                            <div class="Cur-P1">
+                                <!-- Tieu de de nhan vao -->
                                 <img class="Cur-A" src="../assets/ar-d.png" alt="">
-                                <div class="Cur-P1-TD">Lessons with video content</div>
-                                <div class="Cur-P1-Nu">
+                                <div class="Cur-P1-TD-title">Lessons with video content</div>
+                                <div class="Cur-P1-Number">
                                     <div class="Cur-P1-Les">3 Lessons</div>
                                     <div class="Cur-P1-Time">45 Mins</div>
                                 </div>
+                                <!-- Noi dung bi an -->
+                                <div class="Cur-P1-Content">
+                                    <div class="Cur-P1-ND">
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- Curriculum 3 -->
                             <div class="Cur-P1">
+                                <!-- Tieu de de nhan vao -->
                                 <img class="Cur-A" src="../assets/ar-d.png" alt="">
-                                <div class="Cur-P1-TD">Lessons with video content</div>
-                                <div class="Cur-P1-Nu">
+                                <div class="Cur-P1-TD-title">Lessons with video content</div>
+                                <div class="Cur-P1-Number">
                                     <div class="Cur-P1-Les">5 Lessons</div>
                                     <div class="Cur-P1-Time">45 Mins</div>
                                 </div>
+                                <!-- Noi dung bi an -->
+                                <div class="Cur-P1-Content">
+                                    <div class="Cur-P1-ND">
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- Curriculum 4 -->
                             <div class="Cur-P1">
+                                <!-- Tieu de de nhan vao -->
                                 <img class="Cur-A" src="../assets/ar-d.png" alt="">
-                                <div class="Cur-P1-TD">Lessons with video content</div>
-                                <div class="Cur-P1-Nu">
+                                <div class="Cur-P1-TD-title">Lessons with video content</div>
+                                <div class="Cur-P1-Number">
                                     <div class="Cur-P1-Les">5 Lessons</div>
                                     <div class="Cur-P1-Time">45 Mins</div>
                                 </div>
-                            </div> -->
+                                <!-- Noi dung bi an -->
+                                <div class="Cur-P1-Content">
+                                    <div class="Cur-P1-ND">
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Curriculum 5 -->
+                            <div class="Cur-P1">
+                                <!-- Tieu de de nhan vao -->
+                                <img class="Cur-A" src="../assets/ar-d.png" alt="">
+                                <div class="Cur-P1-TD-title">Lessons with video content</div>
+                                <div class="Cur-P1-Number">
+                                    <div class="Cur-P1-Les">5 Lessons</div>
+                                    <div class="Cur-P1-Time">45 Mins</div>
+                                </div>
+                                <!-- Noi dung bi an -->
+                                <div class="Cur-P1-Content">
+                                    <div class="Cur-P1-ND">
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="DE1">
+                                            <div class="DE1-TD">
+                                                <img class="DE1-IMG" src="../assets/cur.png" alt="">
+                                                <p>Lessons with video content</p>
+                                            </div>
+                                            <div class="DE1-Time">
+                                                <a href="">Preview</a>
+                                                <p>12:30</p>
+                                                <img class="DE1-Tick" src="../assets/tick.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- Instructor -->
@@ -233,22 +464,54 @@
                             </div>
                         </div>
                     </div>
+                    <!-- FAQS -->
+                    <div id="tab-faqs" class="tab-content">
+                        <div class="FAQ-P1-Holder">
+                            <!-- Tieu de de nhan vao -->
+                            <div class="FAQ-P1-Header">
+                                <div class="FAQ-P1">What Does Royalty Free Mean?</div>
+                                <span><img class="FAQ-Ar" src="../assets/ar-d.png" alt=""></span>
+                            </div>
+                            <!-- Noi dung bi an -->
+                            <div class="FAQ-P1-ND">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                            </div>
+                        </div>
+                        <div class="FAQ-P1-Holder">
+                            <!-- Tieu de de nhan vao -->
+                            <div class="FAQ-P1-Header">
+                                <div class="FAQ-P1">What Does Royalty Free Mean?</div>
+                                <span><img class="FAQ-Ar" src="../assets/ar-d.png" alt=""></span>
+                            </div>
+                            <!-- Noi dung bi an -->
+                            <div class="FAQ-P1-ND">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                            </div>
+                        </div>
+                        <div class="FAQ-P1-Holder">
+                            <!-- Tieu de de nhan vao -->
+                            <div class="FAQ-P1-Header">
+                                <div class="FAQ-P1">What Does Royalty Free Mean?</div>
+                                <span><img class="FAQ-Ar" src="../assets/ar-d.png" alt=""></span>
+                            </div>
+                            <!-- Noi dung bi an -->
+                            <div class="FAQ-P1-ND">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                            </div>
+                        </div>
+                        <div class="FAQ-P1-Holder">
+                            <!-- Tieu de de nhan vao -->
+                            <div class="FAQ-P1-Header">
+                                <div class="FAQ-P1">What Does Royalty Free Mean?</div>
+                                <span><img class="FAQ-Ar" src="../assets/ar-d.png" alt=""></span>
+                            </div>
+                            <!-- Noi dung bi an -->
+                            <div class="FAQ-P1-ND">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div class="Detail2">
                     <div class="Detail2-TD">
                         <h1>Leave A Comment</h1>

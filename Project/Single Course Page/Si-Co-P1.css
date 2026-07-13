@@ -361,20 +361,32 @@ body {
     color: #000000;
     text-decoration: none;
 }
-.tab-btn active {
+.tab-btn {
     width: 170px;
     height: 64px;
+    border-width: 1px, 0px, 1px, 1px;
+    border-style: solid;
+    border-color: var(--Light_grey, #EAEAEA);
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#first {
+    width: 170px;
+    height: 64px;
+    border-width: 1px, 0px, 1px, 1px;
+    border-style: solid;
+    border-color: var(--Light_grey, #EAEAEA);
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     border-top-left-radius: 20px;
-    border-width: 1px, 0px, 1px, 1px;
-    border-style: solid;
-    border-color: var(--Light_grey, #EAEAEA);
-    padding: 20px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
 }
-.tab-btn {
+#last {
     width: 170px;
     height: 64px;
     border-width: 1px, 0px, 1px, 1px;
@@ -385,19 +397,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-}
-.tab-btn {
-    width: 170px;
-    height: 64px;
     border-top-right-radius: 20px;
-    border-width: 1px, 0px, 1px, 1px;
-    border-style: solid;
-    border-color: var(--Light_grey, #EAEAEA);
-    padding: 20px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
 }
 /* Overview */
 #tab-overview {
@@ -463,11 +463,17 @@ body {
 .Cur-A {
     width: 16px;
     height: 16px;
+    transition: transform 0.2s ease;
+}
+.Cur-A.rotated {
+    transform: rotate(180deg);
 }
 .Cur-P1-TD-title {
     width: 576px;
     height: 24px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 .Cur-P1-TD-title.active {
   color: #ff6600; /* Màu cam giống trong hình */
@@ -483,6 +489,51 @@ body {
     vertical-align: middle;
     text-transform: capitalize;
     color:#000000 ;
+}
+.Cur-P1-Number {
+    width: 142px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.Cur-P1-Les {
+    width: 66px;
+    height: 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    font-family: Jost;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:#555555 ;
+}
+.Cur-P1-Time {
+    width: 56px;
+    height: 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    font-family: Jost;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:#555555 ;
 }
 /* 1. Mặc định ẩn nội dung đi khi vừa tải trang */
 .Cur-P1-Content {
@@ -503,9 +554,16 @@ body {
     background-color: white;
 }
 .DE1 {
-    width: 790px;
+    width: 100%;
     height: 56px;
-    padding: 12px 20px 12px 44px;
+    padding: 12px 20px 12px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.DE1-TD {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -515,7 +573,7 @@ body {
     width: 16px;
     height: 16px;
 }
-.DE1 p {
+.DE1-TD p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
@@ -570,48 +628,6 @@ body {
     width: 16px;
     height: 16px;
 }
-.Cur-P1-Number {
-    width: 142px;
-    height: 24px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-.Cur-P1-Les {
-    width: 66px;
-    height: 24px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-.Cur-P1-Time {
-    width: 56px;
-    height: 24px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Instructor */
 #tab-instructor {
     width: 850px;
@@ -709,7 +725,62 @@ body {
     flex-direction: row;
     gap: 12px;
 }
+/* FAQ */
+#tab-faqs {
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    grid-area: 20px;
+    background: var(--White_grey, #F5F5F5);
+}
+.FAQ-P1-Holder {
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: var(--White, #FFFFFF);
+    overflow: hidden;
 
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: black;
+}
+.FAQ-P1-Header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.FAQ-P1 {
+    width: 100%;
+    cursor: pointer;
+}
+.FAQ-P1.active {
+    color: #ff6600;
+}
+.FAQ-P1-ND  {
+    display: none !important;
+}
+.FAQ-P1-ND.show{
+    display: block !important;
+}
 
 
 
