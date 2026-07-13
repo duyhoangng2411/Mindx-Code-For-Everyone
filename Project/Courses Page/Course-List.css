@@ -102,7 +102,7 @@ body {
 /* Than */
 .co-holder {
     width: 1290px;
-    height: 1697px;
+    height: 1811px;
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -110,7 +110,7 @@ body {
 }
 .co-left {
     width: 990px;
-    height: 1697px;
+    height: 1811px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -157,37 +157,42 @@ body {
 }
 .co-le-nd-holder {
     width: 990px;
-    height: 1614px;
+    height: 1728px;
     display: flex;
-    flex-direction: row;
-    column-gap: 30px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
 }
-
 .p1-holder {
-    width: 480px;
-    height: 492px;
+    width: 990px;
+    height: 250px;
     border-radius: 20px;
     border: 1px solid var(--Light_grey, #EAEAEA);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 .p1-de {
-    width: 480px;
-    height: 200px;
+    width: 580px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
+}
+.p1-de-td {
+    width: 540px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.p1-de-td {
-    width: 440px;
+.p1-td {
+    width: 540px;
     height: 60px;
     display: flex;
-    flex-direction: column;
+    flex-direction:column ;
     gap: 12px;
 }
-.p1-de-td p {
+.p1-td p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
@@ -196,9 +201,9 @@ body {
     line-height: 150%;
     letter-spacing: 0%;
     vertical-align: middle;
-    color: #555555;
+    color: #000000;
 }
-.p1-de-td h1 {
+.p1-td h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     font-style: SemiBold;
@@ -207,25 +212,26 @@ body {
     line-height: 120%;
     letter-spacing: 0%;
     text-transform: capitalize;
-    color:#000000 ;
+    color: #000000;
 }
-.p1-es {
-    width: 214px;
+.p1-nu {
+    width: 446px;
     height: 24px;
     display: flex;
     flex-direction: row;
     gap: 24px;
 }
-.p1-es p {
+.p1-nu p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
     font-size: 16px;
-    text-box: NONE;
+    text-box-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     vertical-align: middle;
     color:#555555 ;
+    white-space: nowrap;
 }
 .p1-time {
     width: 78px;
@@ -243,9 +249,27 @@ body {
     align-items: center;
     gap: 8px;
 }
+.p1-levels {
+    width: 112px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.p1-lessons {
+    width: 112px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
 .p1-fee-holder {
-    width: 440px;
-    height: 27px;
+    width: 540px;
+    height: 43px;
+    border-top: 1px solid var(--Light_grey, #EAEAEA);
+    padding-top: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -330,7 +354,7 @@ body {
     color:#000000 ;
     text-decoration: none;
 }
-/* Ben trai */
+/* Ben Phai */
 .co-right {
     width: 270px;
     height: 1104px;
@@ -514,6 +538,7 @@ body {
     flex-direction: column;
     gap: 10px;
 }
+/* Footer */
 /* footer */
 .footer-holder {
     width: 100%;
