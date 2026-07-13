@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body {
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,14 +103,14 @@ body {
 /* Than */
 .Detail-Holder {
     width: 100%;
-    /* height: 1214px; */
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 .Detail-TD-Holder {
     width: 100%;
-    height: 290px;
+    height: auto;
     padding: 50px 10px;
     display: flex;
     justify-content: center;
@@ -319,13 +320,13 @@ body {
 }
 /* Chi tiet */
 .Detail-Holder-CT {
-    height: 874px;
+    height: auto;
     display: flex;
     gap: 40px;
 }
 .Detail {
     width: 850px;
-    height: 874px;
+    height: auto;
     position: relative;
     left: 112px;
     display: flex;
@@ -334,7 +335,7 @@ body {
 }
 .Detail1 {
     width: 850px;
-    height: 448px;
+    height: auto;
     border-radius: 20px;
 }
 .Detail1-TD {
@@ -422,7 +423,7 @@ body {
 /* Curriculum */
 #tab-curriculum {
     width: 850px;
-    height: 630px;
+    min-height: 630px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     padding: 30px;
@@ -441,31 +442,37 @@ body {
     color:#555555 ;
 }
 .Curriculum-Holder {
-    width: 790px;
-    height: 496px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 .Cur-P1 {
     width: 790px;
-    height: 56px;
+    min-height: 56px;
     border-radius: 8px;
     padding: 16px 20px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap; /* Giúp đẩy phần nội dung rớt xuống hàng dưới */
+    align-items: center;
     gap: 8px;
     background: var(--White, #FFFFFF);
+    overflow: hidden;
 }
 .Cur-A {
     width: 16px;
     height: 16px;
 }
-.Cur-P1-TD {
+.Cur-P1-TD-title {
     width: 576px;
     height: 24px;
+    cursor: pointer;
 }
-.Cur-P1-TD {
+.Cur-P1-TD-title.active {
+  color: #ff6600; /* Màu cam giống trong hình */
+}
+.Cur-P1-TD-title {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     font-style: SemiBold;
@@ -477,7 +484,93 @@ body {
     text-transform: capitalize;
     color:#000000 ;
 }
-.Cur-P1-Nu {
+/* 1. Mặc định ẩn nội dung đi khi vừa tải trang */
+.Cur-P1-Content {
+    width: 100%;
+    display: none !important;
+}
+
+/* 2. Khi JavaScript thêm class 'show', hiển thị khối lên */
+.Cur-P1-Content.show {
+    display: block !important;
+}
+.Cur-P1-ND {
+    width: 100%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: var(--White, #FFFFFF);
+    display: block;
+    background-color: white;
+}
+.DE1 {
+    width: 790px;
+    height: 56px;
+    padding: 12px 20px 12px 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.DE1-IMG {
+    width: 16px;
+    height: 16px;
+}
+.DE1 p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:#000000 ;
+}
+.DE1-Time {
+    width: 188px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.DE1-Time a {
+    width: 76px;
+    height: 32px;
+    border-radius: 8px;
+    padding: 4px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background: var(--Blue, #2580D5);
+
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.DE1-Time p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:#555555 ;
+}
+.DE1-tick {
+    width: 16px;
+    height: 16px;
+}
+.Cur-P1-Number {
     width: 142px;
     height: 24px;
     display: flex;
@@ -500,6 +593,25 @@ body {
     flex-direction: row;
     gap: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Instructor */
 #tab-instructor {
     width: 850px;
