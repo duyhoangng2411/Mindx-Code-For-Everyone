@@ -250,7 +250,7 @@ body {
     gap: 8px;
 }
 .p1-levels {
-    width: 112px;
+    width: 84px;
     height: 24px;
     display: flex;
     flex-direction: row;
@@ -258,7 +258,7 @@ body {
     gap: 8px;
 }
 .p1-lessons {
-    width: 112px;
+    width: 100px;
     height: 24px;
     display: flex;
     flex-direction: row;
@@ -538,7 +538,6 @@ body {
     flex-direction: column;
     gap: 10px;
 }
-/* Footer */
 /* footer */
 .footer-holder {
     width: 100%;
