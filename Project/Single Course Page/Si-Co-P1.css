@@ -837,8 +837,8 @@ body {
     gap: 4px;
 }
 .Reviews-Holders-P1-Rate img {
-    width: auto;
-    height: 20px;
+    width: 116px;
+    height: auto;
 }
 .Reviews-Holders-P1-Rate p {
     font-family: 'Jost', sans-serif;
@@ -850,6 +850,7 @@ body {
     letter-spacing: 0%;
     color: #555555;
     white-space: nowrap;
+    padding-left: 4px;
 }
 /* Progress Bar Rate */
 
@@ -867,12 +868,11 @@ body {
     gap: 15px;                /* Khoảng cách ngang giữa các cột */
     width: 100%;
 }
-
 /* Cột 1: Cố định độ rộng phần 5 Sao */
-.stars {
+.Progress-Bar-Holder img {
     width: 80px;
     height: 16px;
-    object-fit: contain;
+    flex-shrink: 0;
 }
 
 /* Cột 2: Cố định độ rộng phần chữ số % */
@@ -886,11 +886,12 @@ body {
     line-height: 150%;
     letter-spacing: 0%;
     color: #555555;
+    margin-left: 0;
 }
 
 /* Cột 3: Thanh nền xám tự giãn rộng hết cỡ */
 .Progress-Bar {
-    width: 650px;             /* Chiếm toàn bộ khoảng trống bên phải */
+    width: 100%;             /* Chiếm toàn bộ khoảng trống bên phải */
     height: 10px;              /* Chiều cao thanh */
     background-color: #f1f1f1; /* Màu nền xám nhạt */
     border-radius: 4px;
