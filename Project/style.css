@@ -18,9 +18,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 5px;
 }
 .navbar img {
-    width: 166.3px;
+    width: 250px;
     height: auto;
 }
 .mid-nav {
@@ -85,7 +86,7 @@ body {
     width: 100%;
     min-height: 700px;
     height: auto;
-    background-image: url(./images/intro/back-intro.png);
+    background-image: url(./assets/Intro/back-intro.png);
     background-repeat: no-repeat; /* Không lặp lại ảnh */
     background-size: cover; /* Phóng to ảnh vừa vặn toàn bộ khung */
     background-position: center; /* Canh giữa ảnh */
@@ -574,15 +575,18 @@ body {
     color:#FFFFFF ;
     text-decoration: none;
 }
-/* Estimate  Numbers */
-.es-nu {
-    width: 1290px;
-    height: 181px;
+/* Number Students, Courses, Instructor, Satisfaction Rate */
+.Number {
     margin-top: 100px;
+    width: 100%;
+    height: auto;
     display: flex;
-    gap: 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;;
 }
-.AS {
+.Number-Students {
     width: 300px;
     height: 181px;
     border-radius: 20px;
@@ -594,10 +598,9 @@ body {
     gap: 16px;
     background: var(--White_grey, #F5F5F5);
 }
-.AS h1 {
+.Number-Students h1 {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 32px;
     text-box-trim: NONE;
     line-height: 120%;
@@ -605,7 +608,7 @@ body {
     text-transform: capitalize;
     color: #FF782D;
 }
-.AS p {
+.Number-Students p {
     font-family: 'Jost',sans-serif;
     font-weight: 500;
     font-style: Medium;
@@ -616,25 +619,30 @@ body {
     text-transform: capitalize;
     color: #000000;
 }
-/* Grow */
-.grow-holder {
-    width: 1289;
+/* Grow Us */
+.Grow-Us {
+    width: 100%;
     height: 469px;
     display: flex;
     gap: 125px;
     margin: 100px;
+    justify-content: center;
+    align-items: center;
 }
-.grow{
+.Grow-Us img {
+    width: 644px;
+    height: 469px;
+}
+.Grow{
     width: 520px;
     height: 384px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
-.grow-td {
+.Grow-Nav {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 32px;
     text-box-trim: NONE;
     line-height: 120%;
@@ -642,21 +650,21 @@ body {
     text-transform: capitalize;
     color: #000000;
 }
-.grow-de {
+.Grow-Content-Holder {
     width: 520px;
     height: 284px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.grow-detail {
+.Grow-Content {
     width: 520px;
     height: 216px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.grow-detail p {
+.Grow-Content p {
     font-family: 'Jost',sans-serif;
     font-weight: 400;
     font-style: Regular;
@@ -666,14 +674,14 @@ body {
     letter-spacing: 0%;
     color:#555555 ;
 }
-.cer {
+.Grow-Content-Certification {
     width: 520px;
     height: 144px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.cer1{
+.Certification{
     display: flex;
     align-items: center;
     gap: 8px;
@@ -688,19 +696,49 @@ body {
     vertical-align: middle;
     color:#000000 ;
 }
-/* theme */
-.theme-holder {
+.Certification img {
+    width: 16px;
+    height: 16px;
+}
+.Grow-Content-Holder a {
+    width: 177px;
+    height: 48px;
+    border-radius: 24px;
+    padding: 10px 24px;
+    background: var(--Primary, #FF782D);
+
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+/* Education WordPress Theme */
+.Theme-Holder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Theme {
     width: 1290px;
     height: 300px;
     display: flex;
     gap: 10px;
-    background-image: url(./images/theme/theme.png);
+    background-image: url(./assets/Theme/theme.png);
     background-repeat: no-repeat; /* Không lặp lại ảnh */
     background-size: cover; /* Phóng to ảnh vừa vặn toàn bộ khung */
     background-position: center; /* Canh giữa ảnh */
     /* margin-top: 100px; */
 }
-.theme-de {
+.Theme-Content {
     width: 600px;
     height: 188px;
     display: flex;
@@ -712,7 +750,7 @@ body {
     left: 335px
 
 }
-.theme-de-td {
+.Theme-Content-P1 {
     width: 429px;
     height: 69px;
     display: flex;
@@ -720,10 +758,9 @@ body {
     align-items: center;
     gap: 12px;
 }
-.theme-de-td p {
+.Theme-Content-P1 p {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 16px;
     text-box-trim: NONE;
     line-height: 120%;
@@ -732,7 +769,7 @@ body {
     text-transform: capitalize;
     color:#000000 ;
 }
-.theme-de-td h1 {
+.Theme-Content-P h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     font-style: SemiBold;
@@ -744,7 +781,7 @@ body {
     text-transform: capitalize;
     color: black;
 }
-.theme-detail {
+.Theme-Content-P2 {
     width: 536px;
     height: 95px;
     display: flex;
@@ -752,7 +789,7 @@ body {
     align-items: center;
     gap: 20px;
 }
-.theme-detail p {
+.Theme-Content-P2 p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
@@ -763,26 +800,46 @@ body {
     text-align: center;
     color: black;
 }
-/* feedbacks */
-.fe-holder {
-    width: 1290px;
-    height: 534.8px;
+.Theme-Content-P2 a {
+    width: 177px;
+    height: 48px;
+    border-radius: 24px;
+    padding: 10px 24px;
+    background: var(--Primary, #FF782D);
+
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+/* FeedBacks */
+.FeedBacks {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 50px;
     margin-top: 100px;
 }
-.fe-td {
+.FeedBacks-TD {
     width: 1290px;
     height: 77px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.fe-td h1 {
+.FeedBacks-TD h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 32px;
     text-box-trim: NONE;
     line-height: 120%;
@@ -791,10 +848,9 @@ body {
     text-transform: capitalize;
     color: black;
 }
-.fe-td p {
+.FeedBacks-TD p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
@@ -802,20 +858,25 @@ body {
     text-align: center;
     color: #555555;
 }
-.fe-de {
-    width: 1290px;
-    height: 407.8px;
+.FeedBacks-Content {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     gap: 30px;
-}.fe1 {
+}
+.FeedBacks-1 {
     width: 300px;
     height: 407.8px;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    border: 1px solid var(--Light_grey, #EAEAEA);
+    border-radius: 20px;
 }
-.fe1-1 {
+.FeedBacks-Detail {
     width: 240px;
     height: 238.8px;
     display: flex;
@@ -831,14 +892,18 @@ body {
     letter-spacing: 0%;
     color:#000000 ;
 }
-.fe1-2 {
+.FeedBacks-Detail img {
+    width: 35.5px;
+    height: 29.8px;
+}
+.FeedBacks-Feedbacker {
     width: 95px;
     height: 59px;
     flex-direction: flex;
     flex-direction: column;
     gap: 8px;
 }
-.fe1-2 h1 {
+.FeedBacks-Feedbacker h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     font-style: SemiBold;
@@ -850,7 +915,7 @@ body {
     color: black;
     white-space: nowrap;
 }
-.fe1-2 p {
+.FeedBacks-Feedbacker p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
@@ -860,18 +925,28 @@ body {
     letter-spacing: 0%;
     color: black
 }
-/* wel */
-.wel-holder {
+/* Sign Up */
+.Sign-up-Holder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.Sign-Up {
     width: 1290px;
     height: 250px;
     border-radius: 20px;
-    background-image: url(./images/wel.png);
+    background-image: url(./assets/Sign-Up/Welcome.png);
     background-repeat: no-repeat; /* Không lặp lại ảnh */
     background-size: cover; /* Phóng to ảnh vừa vặn toàn bộ khung */
     background-position: center; /* Canh giữa ảnh */
-    /* margin-top: 100px; */
+    margin-top: 100px;
 }
-.wel-nav {
+.Sign-Up img {
+    width: 1290px;
+    height: 250px;
+}
+.Sign-Up-Content {
     position: relative;
     top: -190px;
     left: 50px;
@@ -883,7 +958,7 @@ body {
     justify-content: space-between;
     z-index: 1;
 }
-.wel1 {
+.Sign-Up-Detail {
     width: 433px;
     height: 120px;
     display: flex;
@@ -891,10 +966,13 @@ body {
     align-items: center;
     gap: 32px;
 }
-.wel1 h1 {
+.Sign-Up-Detail img {
+    width: 120px;
+    height: 120px;
+}
+.Sign-Up-Detail h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 20px;
     text-box-trim: NONE;
     line-height: 120%;
@@ -903,14 +981,14 @@ body {
     color:  black;
     white-space: nowrap;
 }
-.wel2 {
+.Sign-Up-Choice {
     width: 395px;
     height: 48px;
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-.i-stu {
+.Choice-Student {
     width: 156px;
     height: 48px;
     border-radius: 24px;
@@ -929,7 +1007,7 @@ body {
     text-decoration: none;
     /* white-space: nowrap; */
 }
-.i-ins {
+.Choice-Instructor {
     width: 219px;
     height: 48px;
     border-radius: 24px;
@@ -950,30 +1028,31 @@ body {
     text-decoration: none;
     /* white-space: nowrap; */
 }
-/* articles */
-.articles-holder {
-    width: 1290px;
-    height:575px;
+/* Articles */
+.Articles {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 34px;
     margin: 100px;
 }
-.art-nav {
-    width: 1290px;
-    height: 77px;
+.Articles-Nav {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0px 40px;
 }
-.art-td {
+.Articles-Nav-Left {
     width: 787px;
     height: 77px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.art-td h1 {
+.Articles-Nav-Left h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     font-style: SemiBold;
@@ -984,7 +1063,7 @@ body {
     text-transform: capitalize;
     color: #000000 ;
 }
-.art-td p {
+.Articles-Nav-Left p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
@@ -994,7 +1073,7 @@ body {
     letter-spacing: 0%;
     color:#555555;
 }
-.all-art {
+.Articles-Nav a {
     width: 134px;
     height: 48px;
     border-radius: 24px;
@@ -1013,14 +1092,15 @@ body {
     white-space: nowrap;
     text-decoration: none;
 }
-.art-de {
-    width: 1290px;
-    height: 464px;
+.Articles-Content {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    justify-content: space-around;
+    gap: 20px;
 }
-.art-p1 {
+.Articles-Name-1 {
     width: 410px;
     height: 440px;
     display: flex;
@@ -1028,7 +1108,11 @@ body {
     border-radius: 20px;
     border: 1px solid var(--Light_grey, #EAEAEA);
 }
-.art-p1-1 {
+.Articles-Name-1 img {
+    width: 410px;
+    height: 250px;
+}
+.Articles-Detail-1 {
     width: 410px;
     height: 190px;
     padding: 20px;
@@ -1036,7 +1120,7 @@ body {
     flex-direction: column;
     gap: 12px;
 }
-.art-p1-1 h1 {
+.Articles-Detail-1 h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     font-style: SemiBold;
@@ -1047,7 +1131,7 @@ body {
     text-transform: capitalize;
     color: black;
 }
-.p1-1-date {
+.Articles-Detail-1-Date {
     width: 123px;
     height: 24px;
     display: flex;
@@ -1055,7 +1139,11 @@ body {
     align-items: center;
     gap: 24px;
 }
-.p1-1-date p {
+.Articles-Detail-1-Date img {
+    width: 16px;
+    height: 16px;
+}
+.Articles-Detail-1-Date p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
@@ -1067,7 +1155,7 @@ body {
     color:#555555 ;
     white-space: nowrap;
 }
-.art-p1-1 p {
+.Articles-Name-1 p {
     font-family: Jost;
     font-weight: 400;
     font-style: Regular;
@@ -1078,19 +1166,22 @@ body {
     vertical-align: middle;
     color: #555555;
 }
-/* footer */
-.footer-holder {
+/* Footer */
+.Footer-Holder {
     width: 100%;
-    height: 552px;
+    height: auto;
     padding-top: 90px;
     padding-bottom: 32px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 90px;
     background: var(--White_grey, #F5F5F5);
 }
-.footer {
-    width: 1290px;
-    height: 281px;
+.Footer {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -1099,46 +1190,48 @@ body {
     left: 150px;
 
 }
-.footer1 {
-    width: 410px;
-    height: 131px;
+.Footer-Left {
+    width: 350px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.footer1 p {
+.Footer-Left img {
+    width:  166.3px;
+    height: 30px;
+}
+.Footer-Left p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     color:#555555;
 }
-.footer2 {
+.Footer-Mid {
     width: 190px;
-    height: 191px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 26px;
 }
-.ge-he {
+.Details {
     width: 110px;
-    height: 135px;
+    height: auto;
     list-style: none;
 }
-.footer2 h1 {
+.Footer-Mid h1 {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 20px;
     text-box-trim:  120%;
     letter-spacing: 0%;
     text-transform: capitalize;
     color: black;
 }
-.ge-he a {
+.Details a {
     font-family: 'Jost', sans-serif;
     font-weight: 500;
     font-style: Medium;
@@ -1151,59 +1244,60 @@ body {
     text-decoration: none;
     white-space: nowrap;
 }
-.footer3 {
+.Footer-Right {
     width: 410px;
-    height: 218px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.footer3 h1 {
+.Footer-Right h1 {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 20px;
     text-box-trim:  120%;
     letter-spacing: 0%;
     text-transform: capitalize;
     color: black;
 }
-.con-he {
+.ADDRESS-PHONE {
     width: 410px;
-    height: 162px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.con-he p {
+.ADDRESS-PHONE p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     color: #555555;
 }
-.co-ico {
+.SOCIAL-MEDIA {
     width: 148px;
     height: 20px;
     display: flex;
     flex-direction: row;
     gap: 12px;
 }
-.copy-holder {
-    width: 1290px;
-    height: 59px;
+.SOCIAL-MEDIA a img {
+    width: 20px;
+    height: 20px;
+}
+.Copyright {
+    width: 100%;
+    height: auto;
     border-top: 1px solid var(--Light_grey, #EAEAEA);
     padding-top: 32px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
-    position: relative;
-    top: 370px;
-    left: -800px;
 }
-.copy-holder p {
+.Copyright p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
