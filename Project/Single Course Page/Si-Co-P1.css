@@ -781,11 +781,130 @@ body {
 .FAQ-P1-ND.show{
     display: block !important;
 }
+/* Reviews */
+#tab-reviews {
+    width: 850px;
+    height: 931px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--White_grey, #F5F5F5);
+}
+.Reviews-TD p {
+    font-family: 'Exo',sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color:#000000 ;
+}
+.Reviews-Holder {
+    width: 790px;
+    height: 827px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Reviews-Holder h1 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 36px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color:#000000 ;
+}
+.Reviews-Holders-P1 {
+    width: 790px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.Reviews-Holders-P1-Rate {
+    width: 174px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.Reviews-Holders-P1-Rate img {
+    width: auto;
+    height: 20px;
+}
+.Reviews-Holders-P1-Rate p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #555555;
+    white-space: nowrap;
+}
+/* Progress Bar Rate */
 
+.Reviews-Holders-P2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Từng dòng xếp hàng ngang */
+.Progress-Bar-Holder {
+    display: flex;
+    align-items: center;      /* Căn giữa các thành phần theo chiều dọc */
+    gap: 15px;                /* Khoảng cách ngang giữa các cột */
+    width: 100%;
+}
 
+/* Cột 1: Cố định độ rộng phần 5 Sao */
+.stars {
+    width: 80px;
+    height: 16px;
+    object-fit: contain;
+}
 
+/* Cột 2: Cố định độ rộng phần chữ số % */
+.percent-text {
+    width: 35px;              /* Đảm bảo số % không làm lệch cột */
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #555555;
+}
 
+/* Cột 3: Thanh nền xám tự giãn rộng hết cỡ */
+.Progress-Bar {
+    width: 650px;             /* Chiếm toàn bộ khoảng trống bên phải */
+    height: 10px;              /* Chiều cao thanh */
+    background-color: #f1f1f1; /* Màu nền xám nhạt */
+    border-radius: 4px;
+    overflow: hidden;
+}
 
+/* Thanh màu vàng đại diện cho % */
+.Progress-Fill {
+    height: 100%;
+    width: 0%;                /* Ban đầu là 0% */
+    background-color: #fabc05; /* Màu vàng */
+    border-radius: 4px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Hiệu ứng chạy thanh siêu mượt */
+}
 
 /* De lai Comment */
 .Detail2 {

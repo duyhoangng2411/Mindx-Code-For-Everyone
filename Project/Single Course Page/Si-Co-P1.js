@@ -58,3 +58,32 @@ faqHeaders.forEach(header => {
     }
   });
 });
+
+// Thanh Progress
+document.addEventListener("DOMContentLoaded", () => {
+  // Mảng dữ liệu thực tế (Thứ tự từ 5 sao xuống 1 sao giống giao diện của bạn)
+  const ratingPercentages = [90, 5, 2, 2, 1];
+
+  // Lấy danh sách các dòng rating-row
+  const rows = document.querySelectorAll(".Progress-Bar-Holder");
+
+  rows.forEach((row, index) => {
+    // Lấy số % tương ứng trong mảng dữ liệu
+    const percentValue = ratingPercentages[index] || 0;
+
+    // Tìm thẻ hiển thị số % trong dòng này và cập nhật text
+    const percentText = row.querySelector(".percent-text");
+    if (percentText) {
+      percentText.textContent = `${percentValue}%`;
+    }
+
+    // Tìm thanh màu vàng trong dòng này và tăng chiều rộng (width)
+    const progressFill = row.querySelector(".Progress-Fill");
+    if (progressFill) {
+      // Đặt timeout một chút để tạo hiệu ứng chuyển động chạy mượt sau khi load trang
+      setTimeout(() => {
+        progressFill.style.width = `${percentValue}%`;
+      }, 100);
+    }
+  });
+});
