@@ -447,17 +447,17 @@ body {
 .Course1-Holder[data-page].hidden-course {
     display: none;
 }
-/* Ben phai */
-.co-right {
+/* Noi dung ben Phai */
+.Course-Right {
     width: 270px;
-    height: 1104px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 .Coure-Category  {
     width: 270px;
-    height: 330px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -465,7 +465,6 @@ body {
 .Coure-Category h1 {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 20px;
     text-box-trim: NONE;
     line-height: 120%;
@@ -475,14 +474,14 @@ body {
 }
 .Course-P1 {
     width: 270px;
-    height: 286px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap:10px ;
+    gap: 10px ;
 }
 .check-box-holder {
     width: 270px;
-    height: 27px;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -506,7 +505,6 @@ body {
 .check-box label {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
@@ -519,7 +517,6 @@ body {
 .check-box-holder p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
@@ -538,7 +535,6 @@ body {
 .Instructors h1 {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 20px;
     text-box-trim: NONE;
     line-height: 120%;
