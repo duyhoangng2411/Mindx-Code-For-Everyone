@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body {
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -13,24 +14,38 @@ body {
 /* navbar */
 .navbar {
     width: 100%;
-    height: 72px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 5px;
+}
+.navbar img {
+    width: 250px;
+    height: auto;
 }
 .mid-nav {
-    width: 702px;
-    height: 72px;
+    width: 100%;
+    max-width: 702px;
+    height: auto;
     display: flex;
     list-style: none;
     justify-content: space-between;
     align-items: center;
 }
-
+.mid-nav img {
+    width: 16px;
+    height: 16px;
+}
 .mid-nav a {
+    padding: 0px 20px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+
     font-family: 'Exo', sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 16px;
     text-box-trim: none;
     line-height: 120%;
@@ -39,14 +54,20 @@ body {
     text-transform: capitalize;
     color: #000000;
     text-decoration: none;
+    white-space: nowrap;
 }
 .right-nav{
-    width: 198px;
+    width: auto;
+    height: auto;
     gap: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+.right-nav span img {
+    width: 48px;
+    height: 48px;
 }
 .right-nav a {
     font-family: 'Jost',sans-serif;
@@ -70,14 +91,12 @@ body {
     background: var(--White_grey, #F5F5F5);
 }
 .Path {
-    width: 1290px;
-    height: 24px;
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     gap: 8px;
-    position: relative;
-    top: 10px;
-    left: 70px;
+    padding-left: 52px;
 }
 .Path a {
     font-family: 'Jost',sans-serif;
@@ -90,10 +109,13 @@ body {
     color:#555555;
     text-decoration: none;
 }
+.Path img {
+    width: 16px;
+    height: 16px;
+}
 .Path p {
     font-family: 'Jost',sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
     text-box-trim: NONE;
     line-height: 150%;
@@ -186,6 +208,10 @@ body {
     display: flex;
     flex-direction: row;
     gap: 24px;
+}
+.p1-nu img {
+    width: 16px;
+    height: 16px;
 }
 .p1-nu p {
     font-family: 'Jost', sans-serif;
@@ -624,7 +650,7 @@ body {
     vertical-align: middle;
     color:#555555 ;
 }
-.DE1-tick {
+.DE1-Tick {
     width: 16px;
     height: 16px;
 }
@@ -725,6 +751,14 @@ body {
     flex-direction: row;
     gap: 12px;
 }
+.Follow-Icon {
+    display: flex;
+    gap: 12px;
+}
+.Follow-Icon a img {
+    width: 20px;
+    height: 20px;
+}
 /* FAQ */
 #tab-faqs {
     width: 100%;
@@ -783,8 +817,8 @@ body {
 }
 /* Reviews */
 #tab-reviews {
-    width: 850px;
-    height: 931px;
+    width: 100%;
+    height: auto;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding: 30px;
@@ -796,7 +830,6 @@ body {
 .Reviews-TD p {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 20px;
     text-box-trim: NONE;
     line-height: 120%;
@@ -805,8 +838,8 @@ body {
     color:#000000 ;
 }
 .Reviews-Holder {
-    width: 790px;
-    height: 827px;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -814,7 +847,6 @@ body {
 .Reviews-Holder h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 36px;
     text-box-trim: NONE;
     line-height: 120%;
@@ -823,15 +855,15 @@ body {
     color:#000000 ;
 }
 .Reviews-Holders-P1 {
-    width: 790px;
-    height: 48px;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     gap: 12px;
 }
 .Reviews-Holders-P1-Rate {
-    width: 174px;
-    height: 48px;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -843,7 +875,6 @@ body {
 .Reviews-Holders-P1-Rate p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
     text-box-trim: NONE;
     line-height: 150%;
@@ -874,21 +905,20 @@ body {
     height: 16px;
     flex-shrink: 0;
 }
-
 /* Cột 2: Cố định độ rộng phần chữ số % */
 .percent-text {
-    width: 35px;              /* Đảm bảo số % không làm lệch cột */
+    width: 45px;              /* Đảm bảo số % không làm lệch cột */
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     color: #555555;
     margin-left: 0;
+    display: flex;
+    justify-content: center;
 }
-
 /* Cột 3: Thanh nền xám tự giãn rộng hết cỡ */
 .Progress-Bar {
     width: 100%;             /* Chiếm toàn bộ khoảng trống bên phải */
@@ -897,7 +927,6 @@ body {
     border-radius: 4px;
     overflow: hidden;
 }
-
 /* Thanh màu vàng đại diện cho % */
 .Progress-Fill {
     height: 100%;
@@ -906,7 +935,67 @@ body {
     border-radius: 4px;
     transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Hiệu ứng chạy thanh siêu mượt */
 }
-
+.comment-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.comment {
+    width: 100%;
+    height: auto;
+    border-top: 1px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+.comment img {
+    width: 60px;
+    height: 60px;
+}
+.comment-body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.comment-head {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.comment-head h1 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color:#000000 ;
+}
+.comment-head p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color:#555555 ;
+}
+.comment-text {
+    font-family: 'Jost',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #555555;
+}
 /* De lai Comment */
 .Detail2 {
     width: 850px;
@@ -1044,68 +1133,70 @@ textarea::placeholder {
     color:#FFFFFF ;
     text-decoration: none;
 }
-/* footer */
-.footer-holder {
+/* Footer */
+.Footer-Holder {
+    margin-top: 100px;
     width: 100%;
-    height: 552px;
+    height: auto;
     padding-top: 90px;
     padding-bottom: 32px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 90px;
     background: var(--White_grey, #F5F5F5);
-    margin-top: 100px;
 }
-.footer {
-    width: 1290px;
-    height: 281px;
+.Footer {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 30px;
-    position: relative;
-    top: -10px;
-    left: 150px;
-
 }
-.footer1 {
-    width: 410px;
-    height: 131px;
+.Footer-Left {
+    width: 350px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.footer1 p {
+.Footer-Left img {
+    width:  166.3px;
+    height: 30px;
+}
+.Footer-Left p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     color:#555555;
 }
-.footer2 {
+.Footer-Mid {
     width: 190px;
-    height: 191px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 26px;
 }
-.ge-he {
+.Details {
     width: 110px;
-    height: 135px;
+    height: auto;
     list-style: none;
 }
-.footer2 h1 {
+.Footer-Mid h1 {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 20px;
     text-box-trim:  120%;
     letter-spacing: 0%;
     text-transform: capitalize;
     color: black;
 }
-.ge-he a {
+.Details a {
     font-family: 'Jost', sans-serif;
     font-weight: 500;
     font-style: Medium;
@@ -1118,59 +1209,60 @@ textarea::placeholder {
     text-decoration: none;
     white-space: nowrap;
 }
-.footer3 {
+.Footer-Right {
     width: 410px;
-    height: 218px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.footer3 h1 {
+.Footer-Right h1 {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 20px;
     text-box-trim:  120%;
     letter-spacing: 0%;
     text-transform: capitalize;
     color: black;
 }
-.con-he {
+.ADDRESS-PHONE {
     width: 410px;
-    height: 162px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.con-he p {
+.ADDRESS-PHONE p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     color: #555555;
 }
-.co-ico {
+.SOCIAL-MEDIA {
     width: 148px;
     height: 20px;
     display: flex;
     flex-direction: row;
     gap: 12px;
 }
-.copy-holder {
-    width: 1290px;
-    height: 59px;
+.SOCIAL-MEDIA a img {
+    width: 20px;
+    height: 20px;
+}
+.Copyright {
+    width: 100%;
+    height: auto;
     border-top: 1px solid var(--Light_grey, #EAEAEA);
     padding-top: 32px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
-    position: relative;
-    top: 370px;
-    left: -800px;
 }
-.copy-holder p {
+.Copyright p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
