@@ -55,7 +55,7 @@
             </div>
             <div class="Course-Left-Content-Holder" id="courseHolder">
                 <!-- Trang 1 -->
-                <div class="Course1-Holder" data-page="1">
+                <div class="Course1-Holder" data-page="1" data-course="Commercial" data-instructor="Kenny White" data-price="Free">
                     <img src="../assets/All Courses/C1.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
@@ -557,194 +557,182 @@
         </div>
         <!-- Noi dung ben Phai -->
         <div class="Course-Right">
-            <div class="Coure-Category">
+            <!-- Start -->
+            <div class="Filter-Sidebar">
+                <!-- Course -->
                 <h1>Course Category</h1>
-                <div class="Course-P1">
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="commercial">
-                            <label for="commercial">Commercial</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Office">
-                            <label for="Office">Office</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Shop">
-                            <label for="Shop">Shop</label>
-                        </div>
-                        <p>15</p>
-                    </div>   
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Educate">
-                            <label for="Educate">Educate</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Academy">
-                            <label for="Academy">Academy</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Single Family Home">
-                            <label for="Single Family Home">Single Family Home</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Studio">
-                            <label for="Studio">Studio</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="University">
-                            <label for="University">University</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                </div>
-            </div>
-            <div class="Instructors">
-                <h1>Instructors</h1>
-                <div class="Ins">
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Kenny White">
-                            <label for="Kenny White">Kenny White</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="John Doe">
-                            <label for="John Doe">John Doe</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                </div>    
-            </div>
-            <div class="Price">
+                <ul class="Filter-List" data-filter-group="course">
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Commercial">
+                            <span>Commercial</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Office">
+                            <span>Office</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Shop">
+                            <span>Shop</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Educate">
+                            <span>Educate</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Academy">
+                            <span>Academy</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Single family home">
+                            <span>Single family home</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Studio">
+                            <span>Studio</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Universiy">
+                            <span>Universiy</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                </ul>
+                <!-- Intructors -->
+                <h1>Intructors</h1>
+                <ul class="Filter-List" data-filter-group="instructor">
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Kenny White">
+                            <span>Kenny White</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="John Doe">
+                            <span>John Doe</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                </ul>
+                <!-- Prices -->
                 <h1>Price</h1>
-                <div class="Pri">
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="All">
-                            <label for="All">All</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Free">
-                            <label for="Free">Free</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Paid">
-                            <label for="Paid">Paid</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                </div>    
-            </div>
-            <div class="Review">
+                <ul class="Filter-List" data-filter-group="price">
+                    <li>
+                        <label>
+                            <input type="checkbox" value="All">
+                            <span>All</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Free">
+                            <span>Free</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Paid">
+                            <span>Paid</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                </ul>
+                <!-- Review -->
                 <h1>Review</h1>
-                <div class="Rev">
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="FiveStars">
-                            <label for="FiveStars">
-                                <img style="width: 190px; height: 16px;" src="./assets/5S.png" alt="Đánh giá 5 sao">
-                            </label>
-                        </div>
-                        <p>(1,025)</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="FourStars">
-                            <label for="FourStars">
-                                <img style="width: 190px; height: 16px;" src="./assets/4S.png" alt="Đánh giá 4 sao">
-                            </label>
-                        </div>
-                        <p>(1,025)</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="ThreeStars">
-                            <label for="ThreeStars">
-                                <img style="width: 190px; height: 16px;" src="./assets/3S.png" alt="Đánh giá 3 sao">
-                            </label>
-                        </div>
-                        <p>(1,025)</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="TwoStars">
-                            <label for="TwoStars">
-                                <img style="width: 190px; height: 16px;" src="./assets/2S.png" alt="Đánh giá 2 sao">
-                            </label>
-                        </div>
-                        <p>(1,025)</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="OneStars">
-                            <label for="OneStars">
-                                <img style="width: 190px; height: 16px;" src="./assets/1S.png" alt="Đánh giá 1 sao">
-                            </label>
-                        </div>
-                        <p>(1,025)</p>
-                    </div>
-                </div>    
-            </div>
-            <div class="Level">
+                <ul class="Filter-List" data-filter-group="review">
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Five stars">
+                            <span><img src="../Courses Page/assets/5Stars.png" alt="Danh gia sao"></span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Four stars">
+                            <span><img src="../Courses Page/assets/4Stars.png" alt="Danh gia sao"></span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Three stars">
+                            <span><img src="../Courses Page/assets/3Stars.png" alt="Danh gia sao"></span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Two stars">
+                            <span><img src="../Courses Page/assets/2Stars.png" alt="Danh gia sao"></span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="One star">
+                            <span><img src="../Courses Page/assets/1Stars.png" alt="Danh gia sao"></span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                </ul>
+                <!-- Levels -->
                 <h1>Level</h1>
-                <div class="Lev">
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="All levels">
-                            <label for="All levels">All levels</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Beginner">
-                            <label for="Beginner">Beginner</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Intermidiate">
-                            <label for="Intermidiate">Intermidiate</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                    <div class="check-box-holder">
-                        <div class="check-box">
-                            <input type="checkbox" id="Expert">
-                            <label for="Expert">Expert</label>
-                        </div>
-                        <p>15</p>
-                    </div>
-                </div>    
+                <ul class="Filter-List" data-filter-group="level">
+                    <li>
+                        <label>
+                            <input type="checkbox" value="All levels">
+                            <span>All levels</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Beginner">
+                            <span>Beginner</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Intermidiate">
+                            <span>Intermidiate</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" value="Expert">
+                            <span>Expert</span>
+                        </label>
+                        <p class="filter-count">15</p>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

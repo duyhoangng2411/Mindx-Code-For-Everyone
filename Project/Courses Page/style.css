@@ -455,14 +455,14 @@ body {
     flex-direction: column;
     gap: 30px;
 }
-.Coure-Category  {
-    width: 270px;
+.Filter-Sidebar {
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.Coure-Category h1 {
+.Filter-Sidebar h1 {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
     font-size: 20px;
@@ -470,51 +470,22 @@ body {
     line-height: 120%;
     letter-spacing: 0%;
     text-transform: capitalize;
-    color: #000000 ;
+    color: #000000;
 }
-.Course-P1 {
-    width: 270px;
-    height: auto;
+.Filter-List {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px ;
+    gap: 10px;
 }
-.check-box-holder {
-    width: 270px;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4px;
-}
-.check-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-}
-.check-box input {
-    width: 16px;
+.Filter-List img {
     height: 16px;
 }
-/* .check-box input:checked ~ .checkmark {
-    background-color: black;
-    border-color: #000000;
-} */
-.check-box label {
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    text-box-trim: NONE;
-    line-height: 150%;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    color:#555555 ;
+.Filter-List li {
     display: flex;
     align-items: center;
-}
-.check-box-holder p {
+    justify-content: space-between;
+
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -524,108 +495,8 @@ body {
     vertical-align: middle;
     color:#555555 ;
 }
-.Instructors  {
-    width: 270px;
-    height: 108px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.Instructors h1 {
-    font-family: 'Exo',sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    text-box-trim: NONE;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-transform: capitalize;
-    color: #000000 ;
-}
-.Ins {
-    width: 270px;
-    height: 64px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.Price  {
-    width: 270px;
-    height: 145px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.Price h1 {
-    font-family: 'Exo',sans-serif;
-    font-weight: 600;
-    font-style: SemiBold;
-    font-size: 20px;
-    text-box-trim: NONE;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-transform: capitalize;
-    color: #000000 ;
-}
-.Pri {
-    width: 270px;
-    height: 101px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.Review  {
-    width: 270px;
-    height: 219px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.Review h1 {
-    font-family: 'Exo',sans-serif;
-    font-weight: 600;
-    font-style: SemiBold;
-    font-size: 20px;
-    text-box-trim: NONE;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-transform: capitalize;
-    color: #000000 ;
-}
-.Rev {
-    width: 270px;
-    height: 175px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.Level  {
-    width: 270px;
-    height: 182px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.Level h1 {
-    font-family: 'Exo',sans-serif;
-    font-weight: 600;
-    font-style: SemiBold;
-    font-size: 20px;
-    text-box-trim: NONE;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-transform: capitalize;
-    color: #000000 ;
-}
-.Lev {
-    width: 270px;
-    height: 138px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.Course1-Holder.filtered-out {
+    display: none;
 }
 /* Footer */
 .Footer-Holder {
