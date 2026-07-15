@@ -955,7 +955,7 @@ body {
     height: 60px;
 }
 .comment-body {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -995,6 +995,165 @@ body {
     line-height: 150%;
     letter-spacing: 0%;
     color: #555555;
+}
+.reply-toggle img {
+    width: 14.74px;
+    height: 11.25px;
+}
+.reply-toggle {
+    width: 60.74px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+.reply-toggle:hover {
+    opacity: 0.7;
+}
+.reply-toggle span {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: black;
+}
+.reply-toggle.is-open {
+    color: #999999;
+}
+.reply-toggle.is-open svg {
+    stroke: #999999;
+}
+/* Form Tra loi */
+.reply-form {
+    display: none;
+    margin-top: 16px;
+    gap: 12px;
+    width: 100%;
+}
+.reply-form img {
+    width: 40px;
+    height: 40px;
+}
+.reply-form.is-open {
+    display: flex;
+    flex-direction: row;
+}
+.reply-form textarea {
+    min-width: 0;
+    width: 100%;
+    flex: 1;
+    min-height: 64px;
+    resize: vertical;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 15px;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+.reply-form textarea:focus {
+    border-color: #e04b4b;
+}
+.reply-form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+}
+.btn {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+}
+.btn-post {
+    background: #e04b4b;
+    color: #ffffff;
+}
+.btn-post:hover { background: #c93f3f; }
+.btn-cancel {
+    background: #f0f0f0;
+    color: #555555;
+}
+.btn-cancel:hover { background: #e2e2e2; }
+
+  /* Reply hiển thị thụt lề, có đường kẻ dọc */
+.reply-list {
+    margin-top: 16px;
+    padding-left: 24px;
+    border-left: 2px solid #eeeeee;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.reply-item {
+    display: flex;
+    gap: 12px;
+}
+.reply-item .comment-author { font-size: 16px; }
+.reply-item .comment-text { font-size: 15px; margin-top: 4px; }
+/* Chon trang */
+.Page-Option-Holder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.Page-Option {
+    width: 288px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+.page-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--Light_grey, #EAEAEA);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    text-box-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color:#000000 ;
+    text-decoration: none;
+}
+.page-btn.active-page {
+    background: #000000;
+    color: #FFFFFF;
+    border-color: #000000;
+}
+/* Ẩn card không thuộc trang đang chọn */
+.comment[data-page].hidden-course {
+    display: none;
 }
 /* De lai Comment */
 .Detail2 {
