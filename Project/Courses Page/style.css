@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 body {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,24 +14,38 @@ body {
 /* navbar */
 .navbar {
     width: 100%;
-    height: 72px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 5px;
+}
+.navbar img {
+    width: 250px;
+    height: auto;
 }
 .mid-nav {
-    width: 702px;
-    height: 72px;
+    width: 100%;
+    max-width: 702px;
+    height: auto;
     display: flex;
     list-style: none;
     justify-content: space-between;
     align-items: center;
 }
-
+.mid-nav img {
+    width: 16px;
+    height: 16px;
+}
 .mid-nav a {
+    padding: 0px 20px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+
     font-family: 'Exo', sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 16px;
     text-box-trim: none;
     line-height: 120%;
@@ -38,14 +54,20 @@ body {
     text-transform: capitalize;
     color: #000000;
     text-decoration: none;
+    white-space: nowrap;
 }
 .right-nav{
-    width: 198px;
+    width: auto;
+    height: auto;
     gap: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+.right-nav span img {
+    width: 48px;
+    height: 48px;
 }
 .right-nav a {
     font-family: 'Jost',sans-serif;
@@ -69,14 +91,12 @@ body {
     background: var(--White_grey, #F5F5F5);
 }
 .Path {
-    width: 1290px;
-    height: 24px;
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     gap: 8px;
-    position: relative;
-    top: 10px;
-    left: 70px;
+    padding-left: 52px;
 }
 .Path a {
     font-family: 'Jost',sans-serif;
@@ -89,10 +109,13 @@ body {
     color:#555555;
     text-decoration: none;
 }
+.Path img {
+    width: 16px;
+    height: 16px;
+}
 .Path p {
     font-family: 'Jost',sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
     text-box-trim: NONE;
     line-height: 150%;
@@ -100,40 +123,41 @@ body {
     color:#9D9D9D ;
 }
 /* Than */
-.co-holder {
-    width: 1290px;
-    height: 1811px;
+.Course {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 30px;
     margin: 50px;
 }
-.co-left {
+.Course-Left {
     width: 990px;
-    height: 1811px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
-.co-left-td {
+.Course-Left-Nav {
     width: 990px;
-    height: 43px;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.tool-holder {
+.Search-View-Switch-Holder {
     width: 350px;
-    height: 31px;
+    height: auto;
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-.search {
+.Search {
     width: 270px;
-    height: 31px;
+    height: auto;
 }
-.search input {
+.Search input {
     width: 270px;
     height: 31px;
     border: none;
@@ -141,58 +165,84 @@ body {
     outline: none;
     border-bottom: 1px solid var(--Black, #000000);
 }
-.search input::placeholder {
+.Search input::placeholder {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     color:#9D9D9D ;
 }
-.mag {
+.Search img {
+    width: 20px;
+    height: 20px;
+
     position: absolute;
     left: 1007px;
 }
-.co-le-nd-holder {
-    width: 990px;
-    height: 1728px;
+#gridBtn img {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+#listBtn img {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+}
+/* Noi dung ben trai */
+.Course-Left-Content-Holder {
+    width: 990px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
 }
-.p1-holder {
-    width: 990px;
-    height: 250px;
+.Course1-Holder {
+    width: 480px;
+    height: auto;
     border-radius: 20px;
     border: 1px solid var(--Light_grey, #EAEAEA);
     display: flex;
-    flex-direction: row;
-}
-.p1-de {
-    width: 580px;
-    height: 250px;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
 }
-.p1-de-td {
-    width: 540px;
-    height: 100px;
+.Course1-Holder img {
+    width: 100%;
+    height: 292px;
+    position: relative;
+    border-radius: 20px 20px 0 0;   /* grid view: bo 2 góc trên */
+    overflow: hidden;
+}
+.Course1 {
+    width: 480px;
+    height: auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.p1-td {
-    width: 540px;
-    height: 60px;
+.Course1-Nav {
+    width: 440px;
+    height: auto;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     gap: 12px;
 }
-.p1-td p {
+.Course1-Nav p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
@@ -201,9 +251,9 @@ body {
     line-height: 150%;
     letter-spacing: 0%;
     vertical-align: middle;
-    color: #000000;
+    color: #555555;
 }
-.p1-td h1 {
+.Course1-Nav h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     font-style: SemiBold;
@@ -212,79 +262,71 @@ body {
     line-height: 120%;
     letter-spacing: 0%;
     text-transform: capitalize;
-    color: #000000;
+    color:#000000 ;
 }
-.p1-nu {
-    width: 446px;
+.Course1-Time-Student {
+    width: 214px;
     height: 24px;
     display: flex;
     flex-direction: row;
     gap: 24px;
 }
-.p1-nu p {
+.Course1-Time-Student p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
-    text-box-trim: NONE;
+    text-box: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     vertical-align: middle;
     color:#555555 ;
-    white-space: nowrap;
 }
-.p1-time {
+.Course1-Time {
     width: 78px;
-    height: 24px;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 8px;
 }
-.p1-stu {
+.Course1-Time img {
+    width: 16px;
+    height: 16px;
+}
+.Course1-Student {
     width: 112px;
-    height: 24px;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 8px;
 }
-.p1-levels {
-    width: 84px;
-    height: 24px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
+.Course1-Student img {
+    width: 16px;
+    height: 16px;
 }
-.p1-lessons {
-    width: 100px;
-    height: 24px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
+.line1 {
+    width: 100%;
+    height: 1px;
+    background: var(--Light_grey, #EAEAEA);
 }
-.p1-fee-holder {
-    width: 540px;
-    height: 43px;
-    border-top: 1px solid var(--Light_grey, #EAEAEA);
-    padding-top: 16px;
+.Course1-Fee-Holder {
+    width: 440px;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.p1-fee {
+.Course1-Fee {
     width: 89px;
-    height: 27px;
+    height: auto;
     display: flex;
     flex-direction: row;
     gap: 8px;
 }
-.p1-fee p {
+.Course1-Fee p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
@@ -293,7 +335,7 @@ body {
     text-decoration: line-through;
     color: #9D9D9D;
 }
-.p1-fee span {
+.Course1-Fee span {
     font-family: 'Jost', sans-serif;
     font-weight: 500;
     font-style: Medium;
@@ -305,7 +347,7 @@ body {
     text-transform: capitalize;
     color:#55BE24 ;
 }
-.p1-fee-holder a {
+.Course1-Fee-Holder a {
     font-family: 'Jost', sans-serif;
     font-weight: 500;
     font-style: Medium;
@@ -319,22 +361,63 @@ body {
     color:#000000 ;
     text-decoration: none;
 }
-.page-nu-holder {
+/* List View */
+.Course-Left-Content-Holder.list-view {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.Course-Left-Content-Holder.list-view .Course1-Holder {
+    width: 100%;
+    max-width: 990px;
+    height: auto;
+    flex-direction: row;
+}
+.Course-Left-Content-Holder.list-view .Course1-Holder img {
+    width: 410px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 20px 0 0 20px;
+}
+.Course-Left-Content-Holder.list-view .Course1 {
+    width: 100%;
+    height: auto;
+}
+.Course-Left-Content-Holder.list-view .Course1-Time-Student {
+    width: auto;
+    gap: 24px;
+}
+.Course-Left-Content-Holder.list-view .Course1-Time-Student img {
+    width: 16px;
+    height: 16px;
+}
+.Course-Left-Content-Holder.list-view .line1 {
+    width: 100%;
+    height: 1px;
+    margin-top: 49px;
+}
+.Course-Left-Content-Holder.list-view .Course1-Fee-Holder {
+    width: 100%;
+}
+/* Chon trang */
+.Page-Option-Holder {
     width: 990px;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
-.page-nu {
+.Page-Option {
     width: 288px;
-    height: 48px;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 12px;
 }
-.page-nu a {
+.page-btn {
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -342,6 +425,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     font-family: 'Jost', sans-serif;
     font-weight: 500;
@@ -354,7 +438,16 @@ body {
     color:#000000 ;
     text-decoration: none;
 }
-/* Ben Phai */
+.page-btn.active-page {
+    background: #000000;
+    color: #FFFFFF;
+    border-color: #000000;
+}
+/* Ẩn card không thuộc trang đang chọn */
+.Course1-Holder[data-page].hidden-course {
+    display: none;
+}
+/* Ben phai */
 .co-right {
     width: 270px;
     height: 1104px;
@@ -380,7 +473,7 @@ body {
     text-transform: capitalize;
     color: #000000 ;
 }
-.Course {
+.Course-P1 {
     width: 270px;
     height: 286px;
     display: flex;
@@ -538,67 +631,70 @@ body {
     flex-direction: column;
     gap: 10px;
 }
-/* footer */
-.footer-holder {
+/* Footer */
+.Footer-Holder {
+    margin-top: 100px;
     width: 100%;
-    height: 552px;
+    height: auto;
     padding-top: 90px;
     padding-bottom: 32px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 90px;
     background: var(--White_grey, #F5F5F5);
 }
-.footer {
-    width: 1290px;
-    height: 281px;
+.Footer {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 30px;
-    position: relative;
-    top: -10px;
-    left: 150px;
-
 }
-.footer1 {
-    width: 410px;
-    height: 131px;
+.Footer-Left {
+    width: 350px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.footer1 p {
+.Footer-Left img {
+    width:  166.3px;
+    height: 30px;
+}
+.Footer-Left p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     color:#555555;
 }
-.footer2 {
+.Footer-Mid {
     width: 190px;
-    height: 191px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 26px;
 }
-.ge-he {
+.Details {
     width: 110px;
-    height: 135px;
+    height: auto;
     list-style: none;
 }
-.footer2 h1 {
+.Footer-Mid h1 {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 20px;
     text-box-trim:  120%;
     letter-spacing: 0%;
     text-transform: capitalize;
     color: black;
 }
-.ge-he a {
+.Details a {
     font-family: 'Jost', sans-serif;
     font-weight: 500;
     font-style: Medium;
@@ -611,59 +707,60 @@ body {
     text-decoration: none;
     white-space: nowrap;
 }
-.footer3 {
+.Footer-Right {
     width: 410px;
-    height: 218px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.footer3 h1 {
+.Footer-Right h1 {
     font-family: 'Exo',sans-serif;
     font-weight: 600;
-    font-style: SemiBold;
     font-size: 20px;
     text-box-trim:  120%;
     letter-spacing: 0%;
     text-transform: capitalize;
     color: black;
 }
-.con-he {
+.ADDRESS-PHONE {
     width: 410px;
-    height: 162px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.con-he p {
+.ADDRESS-PHONE p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-style: Regular;
     font-size: 18px;
     text-box-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     color: #555555;
 }
-.co-ico {
+.SOCIAL-MEDIA {
     width: 148px;
     height: 20px;
     display: flex;
     flex-direction: row;
     gap: 12px;
 }
-.copy-holder {
-    width: 1290px;
-    height: 59px;
+.SOCIAL-MEDIA a img {
+    width: 20px;
+    height: 20px;
+}
+.Copyright {
+    width: 100%;
+    height: auto;
     border-top: 1px solid var(--Light_grey, #EAEAEA);
     padding-top: 32px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
-    position: relative;
-    top: 370px;
-    left: -800px;
 }
-.copy-holder p {
+.Copyright p {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-style: Regular;
