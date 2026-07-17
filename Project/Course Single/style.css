@@ -770,6 +770,7 @@ body {
     flex-direction: column;
     grid-area: 20px;
     background: var(--White_grey, #F5F5F5);
+    gap: 20px;
 }
 .FAQ-P1-Holder {
     width: 100%;

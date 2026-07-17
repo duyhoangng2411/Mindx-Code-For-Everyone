@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="../assets/Navbar/logo.png" alt="">
+        <ul class="mid-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Blog</a></li>
+            <li class="Page-dropdown">
+                <a href="#">Page<span><img src="../assets/Arrow-Down.png" alt=""></span></a>
+                <ul class="Page-menu">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Error</a></li>
+                </ul>
+            </li>
+            <li><a href="#">LearnPress Add-On</a></li>
+            <li><a href="#">Premium Theme</a></li>
+        </ul>
+        <div class="right-nav">
+            <button type="button" class="auth-trigger" onclick="openModal('login')">Login / Register</button>
+            <span><img src="../assets/Navbar/Kinhlup.png" alt=""></span>
+        </div>
+    </div>
+    <!-- Đăng nhập + Đăng kí -->
+    <!-- Overlay: phủ nền và modal: khung form -->
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <!-- Nút đóng form -->
+            <button type="button" class="close-btn" onclick="closeModal()" aria-label="Đóng">
+                <img src="../assets/Articles/Arrow-Left.png" alt="">
+            </button>
+            <div class="tabs">
+                <button type="button" class="tab active" id="tab-login" onclick="switchTab('login')">Đăng nhập</button>
+                <button type="button" class="tab" id="tab-register" onclick="switchTab('register')">Đăng ký</button>
+            </div>
+            <!-- LOGIN PANEL -->
+            <div class="panel active" id="panel-login">
+                <h2>Đăng nhập</h2>
+                <div class="field">
+                    <input type="text" placeholder="Email hoặc tên đăng nhập" id="login-user">
+                    <div class="error-msg">Vui lòng nhập email hoặc tên đăng nhập</div>
+                </div>
+                <div class="field">
+                <input type="password" placeholder="Mật khẩu" id="login-pass">
+                    <button type="button" class="eye" onclick="togglePw('login-pass', this)">
+                        <img src="../assets/lock.png" alt="Hide/Unhide Password">
+                    </button>
+                </div>
+                <div class="row-between">
+                    <label class="remember"><input type="checkbox"> Ghi nhớ đăng nhập</label>
+                    <a href="#" class="forgot-link">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="submit-btn" onclick="fakeSubmit('login')">Đăng nhập</button>
+                <div class="divider">hoặc</div>
+                <div class="social-row">
+                    <button type="button" class="social-btn">Google</button>
+                    <button type="button" class="social-btn">Facebook</button>
+                </div>
+                <div class="switch-line">
+                    Chưa có tài khoản? <button type="button" onclick="switchTab('register')">Đăng ký ngay</button>
+                </div>
+            </div>
+            <!-- REGISTER PANEL -->
+            <div class="panel" id="panel-register">
+                <h2>Đăng ký</h2>
+                <div class="field">
+                    <input type="email" placeholder="Email" id="reg-email">
+                    <div class="error-msg">Email không hợp lệ</div>
+                </div>
+                <div class="field">
+                    <input type="text" placeholder="Tên đăng nhập" id="reg-username">
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Mật khẩu" id="reg-pass">
+                    <button type="button" class="eye" onclick="togglePw('reg-pass', this)">
+                        <img src="../assets/lock.png" alt="Hide/Unhide Password">
+                    </button>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Xác nhận mật khẩu" id="reg-confirm">
+                    <button type="button" class="eye" onclick="togglePw('reg-confirm', this)">
+                        <img src="../assets/lock.png" alt="Hide/Unhide Password">
+                    </button>
+                    <div class="error-msg">Mật khẩu xác nhận không khớp</div>
+                </div>
+                <p class="terms">Bằng việc đăng ký, bạn đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a> của chúng tôi.</p>
+                <button type="submit" class="submit-btn" onclick="fakeSubmit('register')">Đăng ký</button>
+                <div class="switch-line">
+                    Đã có tài khoản? <button type="button" onclick="switchTab('login')">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+    </div>        
+    <!-- Duong dan -->
+    <div class="Path-holder">
+        <div class="Path">
+            <a href="">Homepage</a>
+            <img src="../assets/Arrow-Right.png" alt="">
+            <a href="">Course</a>
+            <img src="../assets/Arrow-Right.png" alt="">
+            <p>Best LearnPress WordPress theme collection for 2023</p>
+        </div>
+    </div>
+    <!-- FAQ -->
+    <div class="FAQ-Holder">
+        <h1>FAQ</h1>
+        <div class="FAQ">
+            <div class="FAQ-Left">
+                <div class="FAQ-P1-Holder">
+                    <!-- Tieu de de nhan vao -->
+                    <div class="FAQ-P1-Header">
+                        <div class="FAQ-P1">What Does Royalty Free Mean?</div>
+                        <span><img class="FAQ-Ar" src="../assets/Arrow-Down.png" alt=""></span>
+                    </div>
+                    <!-- Noi dung bi an -->
+                    <div class="FAQ-P1-ND">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                    </div>
+                </div>
+                <div class="FAQ-P1-Holder">
+                    <!-- Tieu de de nhan vao -->
+                    <div class="FAQ-P1-Header">
+                        <div class="FAQ-P1">What Does Royalty Free Mean?</div>
+                        <span><img class="FAQ-Ar" src="../assets/Arrow-Down.png" alt=""></span>
+                    </div>
+                    <!-- Noi dung bi an -->
+                    <div class="FAQ-P1-ND">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                    </div>
+                </div>
+                <div class="FAQ-P1-Holder">
+                    <!-- Tieu de de nhan vao -->
+                    <div class="FAQ-P1-Header">
+                        <div class="FAQ-P1">What Does Royalty Free Mean?</div>
+                        <span><img class="FAQ-Ar" src="../assets/Arrow-Down.png" alt=""></span>
+                    </div>
+                    <!-- Noi dung bi an -->
+                    <div class="FAQ-P1-ND">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                    </div>
+                </div>
+                <div class="FAQ-P1-Holder">
+                    <!-- Tieu de de nhan vao -->
+                    <div class="FAQ-P1-Header">
+                        <div class="FAQ-P1">What Does Royalty Free Mean?</div>
+                        <span><img class="FAQ-Ar" src="../assets/Arrow-Down.png" alt=""></span>
+                    </div>
+                    <!-- Noi dung bi an -->
+                    <div class="FAQ-P1-ND">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="FAQ-Right">
+                <div class="FAQ-P1-Holder">
+                    <!-- Tieu de de nhan vao -->
+                    <div class="FAQ-P1-Header">
+                        <div class="FAQ-P1">What Does Royalty Free Mean?</div>
+                        <span><img class="FAQ-Ar" src="../assets/Arrow-Down.png" alt=""></span>
+                    </div>
+                    <!-- Noi dung bi an -->
+                    <div class="FAQ-P1-ND">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                    </div>
+                </div>
+                <div class="FAQ-P1-Holder">
+                    <!-- Tieu de de nhan vao -->
+                    <div class="FAQ-P1-Header">
+                        <div class="FAQ-P1">What Does Royalty Free Mean?</div>
+                        <span><img class="FAQ-Ar" src="../assets/Arrow-Down.png" alt=""></span>
+                    </div>
+                    <!-- Noi dung bi an -->
+                    <div class="FAQ-P1-ND">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis faucibus odio arcu duis dui, adipiscing facilisis. Urna, donec turpis egestas volutpat. Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="../assets/FAQs/image.png" alt="">
+    </div>
+    <!-- Footer -->
+    <div class="Footer-Holder">
+        <div class="Footer">
+            <div class="Footer-Left">
+                <img src="../assets/Navbar/logo.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="Footer-Mid">
+                <h1>GET HELP</h1>
+                <ul class="Details">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Latest Articles</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="Footer-Mid">
+                <h1>PROGRAMS</h1>
+                <ul class="Details">
+                    <li><a href="#">Art & Design</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">IT & Software</a></li>
+                    <li><a href="#">Languages</a></li>
+                    <li><a href="#">Programming</a></li>
+                </ul>
+            </div>
+            <div class="Footer-Right">
+                <h1>CONTACT US</h1>
+                <div class="ADDRESS-PHONE">
+                    <p>Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA</p>
+                    <p>Tel: + (123) 2500-567-8988 Mail: supportlms@gmail.com</p>
+                </div>
+                <div class="SOCIAL-MEDIA">
+                    <a href=""><img src="../assets/fb.png" alt="Facebook"></a>
+                    <a href=""><img src="../assets/p.png" alt="Pinterest"></a>
+                    <a href=""><img src="../assets/twi.png" alt="Twitter"></a>
+                    <a href=""><img src="../assets/insta.png" alt="Insta"></a>
+                    <a href=""><img src="../assets/you.png" alt="Youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="Copyright">
+            <p>Copyright © 2024 LearnPress LMS | Powered by ThimPress</p>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
