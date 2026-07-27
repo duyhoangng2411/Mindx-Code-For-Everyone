@@ -1,11 +1,3 @@
-:root {
-    --orange: #F26522;
-    --orange-dark: #D9531A;
-    --text: #1a1a1a;
-    --muted: #8a8a8a;
-    --border: #e5e5e5;
-    --bg: #faf9f7;
-}
 *{
     margin: 0;
     padding: 0;
@@ -117,7 +109,6 @@ body {
 }
 /* Đăng nhập + Đăng kí */
 .auth-trigger:hover { color: var(--orange); }
-
 .overlay {
     display: none;
     position: fixed;
@@ -311,10 +302,6 @@ cursor: pointer;
 font-size: 13px;
 font-family: inherit;
 }
-.panel img {
-    width: 12px;
-    height: 12px;
-}
 /* Duong dan */
 .Path-holder {
     width: 100%;
@@ -356,7 +343,7 @@ font-family: inherit;
     letter-spacing: 0%;
     color:#9D9D9D ;
 }
-.FAQ-Holder {
+.Error-Holder {
     width: 100%;
     max-width: 1290px;
     height: auto;
@@ -365,12 +352,7 @@ font-family: inherit;
     gap: 60px;
     margin-top: 60px;
 }
-.FAQ-Holder {
-    width: 100%;
-    max-width: 1290px;
-    height: auto;
-}
-.FAQ-Holder h1 {
+.Error-Holder h1 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
     font-size: 36px;
@@ -380,70 +362,9 @@ font-family: inherit;
     text-transform: capitalize;
     color: black;
 }
-.FAQ {
+.Error-Holder img {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-}
-.FAQ-Left {
-    min-width: 630px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.FAQ-Right {
-    min-width: 630px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.FAQ-P1-Holder {
-    width: 100%;
-    min-width: 630px;
-    height: auto;
-    padding: 20px 30px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    background: var(--White_grey, #F5F5F5);
-    overflow: hidden;
-
-    font-family: 'Exo', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    text-box-trim: NONE;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-transform: capitalize;
-    color: black;
-}
-.FAQ-P1-Header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.FAQ-P1 {
-    width: 100%;
-    cursor: pointer;
-}
-.FAQ-P1.active {
-    color: #ff6600;
-}
-.FAQ-P1-ND  {
-    display: none !important;
-}
-.FAQ-P1-ND.show{
-    display: block !important;
 }
 /* Footer */
 .Footer-Holder {
@@ -457,6 +378,7 @@ font-family: inherit;
     justify-content: center;
     gap: 90px;
     background: var(--White_grey, #F5F5F5);
+    margin-top: 60px;
 }
 .Footer {
     width: 100%;
