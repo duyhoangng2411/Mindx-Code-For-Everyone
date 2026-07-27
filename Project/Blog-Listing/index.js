@@ -15,57 +15,23 @@ listBtn.addEventListener('click', () => {
     gridBtn.classList.remove('active-view');
 });
 
-// Chon trang 
-const allCourses = document.querySelectorAll('.Article1-Holder[data-page]');
+// Chọn trang
+const articleCards = document.querySelectorAll('.Article1-Holder');
+const filterGroups = document.querySelectorAll('.Filter-List');
 const pageButtons = document.querySelectorAll('.page-num');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
+const pageOptionHolder = document.querySelector('.Page-Option-Holder');
+const searchInput = document.querySelector('.Search input');
+
 let currentPage = 1;
+let searchKeyword = '';
 const totalPages = pageButtons.length;
 
-function showPage(page) {
-currentPage = page;
-
-// Ẩn/hiện đúng khóa học theo data-page
-allCourses.forEach(course => {
-    const coursePage = Number(course.dataset.page);
-    course.classList.toggle('hidden-course', coursePage !== page);
-});
-
-// Đổi trạng thái active của số trang
-pageButtons.forEach(btn => {
-    btn.classList.toggle('active-page', Number(btn.dataset.page) === page);
-});
-
-// Cuộn lên đầu section Course cho dễ nhìn (tuỳ chọn)
-document.querySelector('.Article1-Holder').scrollIntoView({ behavior: 'smooth' });
-}
-
-pageButtons.forEach(btn => {
-btn.addEventListener('click', () => showPage(Number(btn.dataset.page)));
-});
-
-prevBtn.addEventListener('click', () => {
-if (currentPage > 1) showPage(currentPage - 1);
-});
-
-nextBtn.addEventListener('click', () => {
-if (currentPage < totalPages) showPage(currentPage + 1);
-});
-
-// Hiện trang 1 khi tải trang lần đầu
-showPage(1);
-
-// Filter - Category
-const articleCards = document.querySelectorAll('.Article1-Holder');
-const filterGroups = document.querySelectorAll('.Filter-List');
-
-function applyFilters() {
+function getActiveFilters() {
     const activeFilters = {};
-
     filterGroups.forEach(group => {
         const groupName = group.dataset.filterGroup;
-
         if (group.classList.contains('Filter-Tags')) {
             const activeBtns = group.querySelectorAll('.filter-btn.active');
             activeFilters[groupName] = Array.from(activeBtns).map(btn => btn.dataset.value);
@@ -74,40 +40,103 @@ function applyFilters() {
             activeFilters[groupName] = Array.from(checked).map(cb => cb.value);
         }
     });
-
-    articleCards.forEach(card => {
-        let visible = true;
-
-        Object.keys(activeFilters).forEach(groupName => {
-            const selectedValues = activeFilters[groupName];
-            if (selectedValues.length === 0) return; // Không có gì được tick -> bỏ qua nhóm này
-
-            if (groupName === 'tags') {
-                // Card có nhiều tag, cách nhau bởi dấu phẩy -> tách thành mảng
-                const cardTags = (card.dataset.tags || '').split(',').map(t => t.trim());
-                // Chỉ cần TRÙNG ít nhất 1 tag đang chọn là hiển thị (OR logic)
-                const hasMatch = selectedValues.some(v => cardTags.includes(v));
-                if (!hasMatch) visible = false;
-            } else {
-                // Category/Instructor/Price... mỗi card chỉ có 1 giá trị duy nhất
-                const cardValue = card.dataset[groupName];
-                if (!selectedValues.includes(cardValue)) visible = false;
-            }
-        });
-
-        card.classList.toggle('filtered-out', !visible);
-    });
+    return activeFilters;
 }
 
-// Checkbox (Category, Instructor, Price, Review, Level)
+function hasAnyActiveFilter(activeFilters) {
+    return Object.values(activeFilters).some(arr => arr.length > 0) || searchKeyword.trim() !== '';
+}
+
+function cardMatchesFilters(card, activeFilters) {
+    let visible = true;
+
+    Object.keys(activeFilters).forEach(groupName => {
+        const selectedValues = activeFilters[groupName];
+        if (selectedValues.length === 0) return;
+
+        if (groupName === 'tags') {
+            const cardTags = (card.dataset.tags || '').split(',').map(t => t.trim());
+            const hasMatch = selectedValues.some(v => cardTags.includes(v));
+            if (!hasMatch) visible = false;
+        } else {
+            const cardValue = card.dataset[groupName];
+            if (!selectedValues.includes(cardValue)) visible = false;
+        }
+    });
+
+    if (searchKeyword.trim() !== '') {
+        const titleEl = card.querySelector('.Article1-Head h1');
+        const title = titleEl ? titleEl.textContent.toLowerCase() : '';
+        if (!title.includes(searchKeyword.trim().toLowerCase())) {
+            visible = false;
+        }
+    }
+
+    return visible;
+}
+
+function render() {
+    const activeFilters = getActiveFilters();
+    const filtering = hasAnyActiveFilter(activeFilters);
+
+    if (filtering) {
+        articleCards.forEach(card => {
+            const match = cardMatchesFilters(card, activeFilters);
+            card.classList.toggle('filtered-out', !match);
+            card.style.display = match ? '' : 'none';
+        });
+        if (pageOptionHolder) pageOptionHolder.style.display = 'none';
+    } else {
+        if (pageOptionHolder) pageOptionHolder.style.display = '';
+        articleCards.forEach(card => {
+            card.classList.remove('filtered-out');
+            const cardPage = parseInt(card.dataset.page, 10);
+            card.style.display = (cardPage === currentPage) ? '' : 'none';
+        });
+    }
+}
+
+function showPage(page) {
+    currentPage = page;
+    pageButtons.forEach(btn => {
+        btn.classList.toggle('active-page', parseInt(btn.dataset.page, 10) === page);
+    });
+    render();
+}
+
+// Checkbox category
 document.querySelectorAll('.Filter-List:not(.Filter-Tags) input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', applyFilters);
+    checkbox.addEventListener('change', render);
 });
 
-// Button (Tags)
+// Nút tag
 document.querySelectorAll('.Filter-Tags .filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         btn.classList.toggle('active');
-        applyFilters();
+        render();
     });
 });
+
+// Nút số trang
+pageButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        showPage(parseInt(btn.dataset.page, 10));
+    });
+});
+
+// Prev / Next
+prevBtn.addEventListener('click', () => {
+    if (currentPage > 1) showPage(currentPage - 1);
+});
+nextBtn.addEventListener('click', () => {
+    if (currentPage < totalPages) showPage(currentPage + 1);
+});
+
+// Search - gõ tới đâu lọc tới đó
+searchInput.addEventListener('input', () => {
+    searchKeyword = searchInput.value;
+    render();
+});
+
+// Khởi tạo lần đầu
+showPage(1);

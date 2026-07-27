@@ -181,25 +181,32 @@ body {
     position: absolute;
     left: 1007px;
 }
+.View-Switch {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 #gridBtn img {
     width: 20px;
     height: 20px;
+}
+#gridBtn {
     border: none;
     background: transparent;
     cursor: pointer;
     display: flex;
-    align-items: center;
     justify-content: center;
     opacity: 1;
 }
 #listBtn img {
     width: 20px;
     height: 20px;
+}
+#listBtn {
     border: none;
     background: transparent;
     cursor: pointer;
     display: flex;
-    align-items: center;
     justify-content: center;
     opacity: 0.4;
 }
