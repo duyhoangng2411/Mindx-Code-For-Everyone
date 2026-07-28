@@ -1326,25 +1326,6 @@ font-family: inherit;
     letter-spacing: 0%;
     color:#555555;
 }
-.Articles-Nav a {
-    width: 134px;
-    height: 48px;
-    border-radius: 24px;
-    border: 2px solid var(--Grey, #9D9D9D);
-    padding: 10px 24px;
-
-    font-family: 'Jost', sans-serif;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 18px;
-    text-box-trim: NONE;
-    line-height: 150%;
-    letter-spacing: 0%;
-    text-transform: capitalize;
-    color: #000000;
-    white-space: nowrap;
-    text-decoration: none;
-}
 .Articles-Content {
     width: 100%;
     height: auto;
@@ -1451,6 +1432,7 @@ font-family: inherit;
     justify-content: center;
     gap: 30px;
 }
+
 .Footer-Left {
     width: 350px;
     height: auto;
@@ -1477,6 +1459,9 @@ font-family: inherit;
     display: flex;
     flex-direction: column;
     gap: 26px;
+}
+.Footer-Mid ul a:hover {
+    color: orange;
 }
 .Details {
     width: 110px;
