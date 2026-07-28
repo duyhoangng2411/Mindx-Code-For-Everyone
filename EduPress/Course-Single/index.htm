@@ -11,27 +11,105 @@
 </head>
 <body>
     <!-- Navbar -->
+    <!-- Navbar -->
     <div class="navbar">
         <img src="../assets/Navbar/logo.png" alt="">
         <ul class="mid-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Page<span><img src="../assets/Arrow-Down.png" alt=""></span></a></li>
-            <li><a href="#">LearnPress Add-On</a></li>
-            <li><a href="#">Premium Theme</a></li>
+            <li><a href="../index.html" class="auth-trigger">Home</a></li>
+            <li><a href="../Courses-Page/index.html" class="auth-trigger">Courses</a></li>
+            <li><a href="" class="auth-trigger">Blog</a></li>
+            <li class="Page-dropdown">
+                <a href="#" class="auth-trigger">Page<span><img src="../assets/Arrow-Down.png" alt=""></span></a>
+                <ul class="Page-menu">
+                    <li><a href="../Contact-Page/index.html" class="auth-trigger">Contact</a></li>
+                    <li><a href="../FAQ-Page/index.html" class="auth-trigger">FAQ</a></li>
+                    <li><a href="../Error-Page/index.html" class="auth-trigger">Error</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="auth-trigger">LearnPress Add-On</a></li>
+            <li><a href="#" class="auth-trigger">Premium Theme</a></li>
         </ul>
         <div class="right-nav">
-            <p><a href="#">Login</a> / <a href="#">Register</a></p>
+            <button type="button" class="auth-trigger" onclick="openModal('login')">Login / Register</button>
             <span><img src="../assets/Navbar/Kinhlup.png" alt=""></span>
+        </div>
+    </div>
+    <!-- Đăng nhập + Đăng kí -->
+    <!-- Overlay: phủ nền và modal: khung form -->
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <!-- Nút đóng form -->
+            <button type="button" class="close-btn" onclick="closeModal()" aria-label="Đóng">
+                <p>x</p>
+            </button>
+            <div class="tabs">
+                <button type="button" class="tab active" id="tab-login" onclick="switchTab('login')">Đăng nhập</button>
+                <button type="button" class="tab" id="tab-register" onclick="switchTab('register')">Đăng ký</button>
+            </div>
+            <!-- LOGIN PANEL -->
+            <div class="panel active" id="panel-login">
+                <h2>Đăng nhập</h2>
+                <div class="field">
+                    <input type="text" placeholder="Email hoặc tên đăng nhập" id="login-user">
+                    <div class="error-msg">Vui lòng nhập email hoặc tên đăng nhập</div>
+                </div>
+                <div class="field">
+                <input type="password" placeholder="Mật khẩu" id="login-pass">
+                    <button type="button" class="eye" onclick="togglePw('login-pass', this)">
+                        <img src="../assets/lock.png" alt="Hide/Unhide Password">
+                    </button>
+                </div>
+                <div class="row-between">
+                    <label class="remember"><input type="checkbox"> Ghi nhớ đăng nhập</label>
+                    <a href="#" class="forgot-link">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="submit-btn" onclick="fakeSubmit('login')">Đăng nhập</button>
+                <div class="divider">hoặc</div>
+                <div class="social-row">
+                    <button type="button" class="social-btn"><img src="../assets/google.png" alt="Google"></button>
+                    <button type="button" class="social-btn"><img src="../assets/facebook.png" alt="Facebook"></button>
+                </div>
+                <div class="switch-line">
+                    Chưa có tài khoản? <button type="button" onclick="switchTab('register')">Đăng ký ngay</button>
+                </div>
+            </div>
+            <!-- REGISTER PANEL -->
+            <div class="panel" id="panel-register">
+                <h2>Đăng ký</h2>
+                <div class="field">
+                    <input type="email" placeholder="Email" id="reg-email">
+                    <div class="error-msg">Email không hợp lệ</div>
+                </div>
+                <div class="field">
+                    <input type="text" placeholder="Tên đăng nhập" id="reg-username">
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Mật khẩu" id="reg-pass">
+                    <button type="button" class="eye" onclick="togglePw('reg-pass', this)">
+                        <img src="../assets/lock.png" alt="Hide/Unhide Password">
+                    </button>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Xác nhận mật khẩu" id="reg-confirm">
+                    <button type="button" class="eye" onclick="togglePw('reg-confirm', this)">
+                        <img src="../assets/lock.png" alt="Hide/Unhide Password">
+                    </button>
+                    <div class="error-msg">Mật khẩu xác nhận không khớp</div>
+                </div>
+                <p class="terms">Bằng việc đăng ký, bạn đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a> của chúng tôi.</p>
+                <button type="submit" class="submit-btn" onclick="fakeSubmit('register')">Đăng ký</button>
+                <div class="switch-line">
+                    Đã có tài khoản? <button type="button" onclick="switchTab('login')">Đăng nhập</button>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Duong dan -->
     <div class="Path-holder">
         <div class="Path">
-            <a href="">Homepage</a>
+            <a href="../index.html">Homepage</a>
             <img src="../assets/Arrow-Right.png" alt="">
-            <a href="">Course</a>
+            <a href="../Courses-Page/index.html">All Course</a>
             <img src="../assets/Arrow-Right.png" alt="">
             <p>The Ultimate Guide To The BestWordPress LMS Plugin</p>
         </div>
@@ -56,15 +134,15 @@
                             <p>156 Students</p>
                         </div>
                         <div class="p1-levels">
-                            <img src="../Courses Page/assets/levels.png" alt="">
+                            <img src="../Courses-Page/assets/levels.png" alt="">
                             <p>All levels</p>
                         </div>
                         <div class="p1-lessons">
-                            <img src="../Courses Page/assets/lessons.png" alt="">
+                            <img src="../Courses-Page/assets/lessons.png" alt="">
                             <p>20 Lessons</p>
                         </div>
                         <div class="p1-quizzes">
-                            <img src="../Courses Page/assets/quiz.png" alt="">
+                            <img src="../Courses-Page/assets/quiz.png" alt="">
                             <p>3 Quizzes</p>
                         </div>
                     </div>
@@ -86,11 +164,11 @@
             <div class="Detail">
                 <div class="Detail1">
                     <div class="Detail1-TD">
-                        <button id="first" class="tab-btn active"onclick="openTab(event, 'tab-overview')">Overview</button>
-                        <button class="tab-btn" onclick="openTab(event, 'tab-curriculum')">Curriculum</button>
-                        <button class="tab-btn" onclick="openTab(event, 'tab-instructor')">Instructor</button>
-                        <button class="tab-btn" onclick="openTab(event, 'tab-faqs')">FAQs</button>
-                        <button id="last" class="tab-btn" onclick="openTab(event, 'tab-reviews')">Reviews</button>
+                        <button type="button" id="first" class="tab-btn active"onclick="openTab(event, 'tab-overview')">Overview</button>
+                        <button type="button" class="tab-btn" onclick="openTab(event, 'tab-curriculum')">Curriculum</button>
+                        <button type="button" class="tab-btn" onclick="openTab(event, 'tab-instructor')">Instructor</button>
+                        <button type="button" class="tab-btn" onclick="openTab(event, 'tab-faqs')">FAQs</button>
+                        <button type="button" id="last" class="tab-btn" onclick="openTab(event, 'tab-reviews')">Reviews</button>
                     </div>
                     <!-- Noi dung hien thi voi tung tab -->
                     <!-- Overview -->
@@ -435,7 +513,7 @@
                     <div id="tab-instructor" class="tab-content">
                         <div class="Ins-Holder">
                             <div class="Ins-1">
-                                <img class="Ins-Img" src="../Courses Page/assets/logo.png" alt="">
+                                <img class="Ins-Img" src="../Courses-Page/assets/logo.png" alt="">
                                 <div class="Ins-1-De">
                                     <h1>ThimPress</h1>
                                     <p>LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online.</p>
@@ -444,7 +522,7 @@
                                         <p>156 Students</p>
                                     </div>
                                     <div class="Ins-1-Stu">
-                                        <img class="Ins-Stu" src="../Courses Page/assets/lessons.png" alt="">
+                                        <img class="Ins-Stu" src="../Courses-Page/assets/lessons.png" alt="">
                                         <p>20 Lessons</p>
                                     </div>
                                 </div>
@@ -526,7 +604,7 @@
                             <div class="Reviews-Holders-P2">
                                 <!-- Dong 5 sao -->
                                 <div class="Progress-Bar-Holder">
-                                    <img class="stars" src="../Courses Page/assets/5Stars.png" alt="">
+                                    <img class="stars" src="../Courses-Page/assets/5Stars.png" alt="">
                                     <span class="percent-text">90%</span>
                                     <div class="Progress-Bar">
                                         <div class="Progress-Fill"></div>
@@ -534,7 +612,7 @@
                                 </div>
                                 <!-- Dong 4 sao -->
                                 <div class="Progress-Bar-Holder">
-                                    <img class="stars" src="../Courses Page/assets/4Stars.png" alt="">
+                                    <img class="stars" src="../Courses-Page/assets/4Stars.png" alt="">
                                     <span class="percent-text">5%</span>
                                     <div class="Progress-Bar">
                                         <div class="Progress-Fill"></div>
@@ -542,7 +620,7 @@
                                 </div>
                                 <!-- Dong 3 sao -->
                                 <div class="Progress-Bar-Holder">
-                                    <img class="stars" src="../Courses Page/assets/3Stars.png" alt="">
+                                    <img class="stars" src="../Courses-Page/assets/3Stars.png" alt="">
                                     <span class="percent-text">2%</span>
                                     <div class="Progress-Bar">
                                         <div class="Progress-Fill"></div>
@@ -550,7 +628,7 @@
                                 </div>
                                 <!-- Dong 2 sao -->
                                 <div class="Progress-Bar-Holder">
-                                    <img class="stars" src="../Courses Page/assets/2Stars.png" alt="">
+                                    <img class="stars" src="../Courses-Page/assets/2Stars.png" alt="">
                                     <span class="percent-text">2%</span>
                                     <div class="Progress-Bar">
                                         <div class="Progress-Fill"></div>
@@ -558,7 +636,7 @@
                                 </div>
                                 <!-- Dong 1 sao -->
                                 <div class="Progress-Bar-Holder">
-                                    <img class="stars" src="../Courses Page/assets/1Stars.png" alt="">
+                                    <img class="stars" src="../Courses-Page/assets/1Stars.png" alt="">
                                     <span class="percent-text">1%</span>
                                     <div class="Progress-Bar">
                                         <div class="Progress-Fill"></div>
@@ -568,7 +646,7 @@
                             <div class="comment-list" id="commentList">
                                 <!-- Comment số 1 -->
                                 <div class="comment" data-comment-id="1" data-page="1">
-                                    <img src="../Courses Page/assets/Avatar-Big.png" alt="">
+                                    <img src="../Courses-Page/assets/Avatar-Big.png" alt="">
                                     <div class="comment-body">
                                         <div class="comment-head">
                                             <h1>Laura Hipster</h1>
@@ -578,11 +656,11 @@
                                             <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
                                         </div>
                                         <button class="reply-toggle" type="button">
-                                            <img src="../Courses Page/assets/Reply.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Reply.png" alt="Reply">
                                             <span class="reply-label">Reply</span>
                                         </button>
                                         <div class="reply-form">
-                                            <img src="../Courses Page/assets/Avatar-Big.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Avatar-Big.png" alt="Reply">
                                             <textarea placeholder="Answer Here....."></textarea>
                                             <div class="reply-form-actions">
                                                 <button class="btn btn-post" type="button">Post Reply</button>
@@ -594,7 +672,7 @@
                                 </div>
                                 <!-- Comment số 2 -->
                                 <div class="comment" data-comment-id="2" data-page="1">
-                                    <img src="../Courses Page/assets/Avatar-Big.png" alt="">
+                                    <img src="../Courses-Page/assets/Avatar-Big.png" alt="">
                                     <div class="comment-body">
                                         <div class="comment-head">
                                             <h1>Laura Hipster</h1>
@@ -604,11 +682,11 @@
                                             <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
                                         </div>
                                         <button class="reply-toggle" type="button">
-                                            <img src="../Courses Page/assets/Reply.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Reply.png" alt="Reply">
                                             <span class="reply-label">Reply</span>
                                         </button>
                                         <div class="reply-form">
-                                            <img src="../Courses Page/assets/Avatar-Big.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Avatar-Big.png" alt="Reply">
                                             <textarea placeholder="Answer Here....."></textarea>
                                             <div class="reply-form-actions">
                                                 <button class="btn btn-post" type="button">Post Reply</button>
@@ -620,7 +698,7 @@
                                 </div>
                                 <!-- Comment số 3 -->
                                 <div class="comment" data-comment-id="3" data-page="1">
-                                    <img src="../Courses Page/assets/Avatar-Big.png" alt="">
+                                    <img src="../Courses-Page/assets/Avatar-Big.png" alt="">
                                     <div class="comment-body">
                                         <div class="comment-head">
                                             <h1>Laura Hipster</h1>
@@ -630,11 +708,11 @@
                                             <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
                                         </div>
                                         <button class="reply-toggle" type="button">
-                                            <img src="../Courses Page/assets/Reply.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Reply.png" alt="Reply">
                                             <span class="reply-label">Reply</span>
                                         </button>
                                         <div class="reply-form">
-                                            <img src="../Courses Page/assets/Avatar-Big.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Avatar-Big.png" alt="Reply">
                                             <textarea placeholder="Answer Here....."></textarea>
                                             <div class="reply-form-actions">
                                                 <button class="btn btn-post" type="button">Post Reply</button>
@@ -646,7 +724,7 @@
                                 </div>
                                 <!-- Comment số 4 -->
                                 <div class="comment" data-comment-id="4" data-page="2">
-                                    <img src="../Courses Page/assets/Avatar-Big.png" alt="">
+                                    <img src="../Courses-Page/assets/Avatar-Big.png" alt="">
                                     <div class="comment-body">
                                         <div class="comment-head">
                                             <h1>Laura Hipster</h1>
@@ -656,11 +734,11 @@
                                             <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
                                         </div>
                                         <button class="reply-toggle" type="button">
-                                            <img src="../Courses Page/assets/Reply.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Reply.png" alt="Reply">
                                             <span class="reply-label">Reply</span>
                                         </button>
                                         <div class="reply-form">
-                                            <img src="../Courses Page/assets/Avatar-Big.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Avatar-Big.png" alt="Reply">
                                             <textarea placeholder="Answer Here....."></textarea>
                                             <div class="reply-form-actions">
                                                 <button class="btn btn-post" type="button">Post Reply</button>
@@ -672,7 +750,7 @@
                                 </div>
                                 <!-- Comment số 5 -->
                                 <div class="comment" data-comment-id="5" data-page="2">
-                                    <img src="../Courses Page/assets/Avatar-Big.png" alt="">
+                                    <img src="../Courses-Page/assets/Avatar-Big.png" alt="">
                                     <div class="comment-body">
                                         <div class="comment-head">
                                             <h1>Laura Hipster</h1>
@@ -682,11 +760,11 @@
                                             <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
                                         </div>
                                         <button class="reply-toggle" type="button">
-                                            <img src="../Courses Page/assets/Reply.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Reply.png" alt="Reply">
                                             <span class="reply-label">Reply</span>
                                         </button>
                                         <div class="reply-form">
-                                            <img src="../Courses Page/assets/Avatar-Big.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Avatar-Big.png" alt="Reply">
                                             <textarea placeholder="Answer Here....."></textarea>
                                             <div class="reply-form-actions">
                                                 <button class="btn btn-post" type="button">Post Reply</button>
@@ -698,7 +776,7 @@
                                 </div>
                                 <!-- Comment số 6 -->
                                 <div class="comment" data-comment-id="6" data-page="2">
-                                    <img src="../Courses Page/assets/Avatar-Big.png" alt="">
+                                    <img src="../Courses-Page/assets/Avatar-Big.png" alt="">
                                     <div class="comment-body">
                                         <div class="comment-head">
                                             <h1>Laura Hipster</h1>
@@ -708,11 +786,11 @@
                                             <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
                                         </div>
                                         <button class="reply-toggle" type="button">
-                                            <img src="../Courses Page/assets/Reply.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Reply.png" alt="Reply">
                                             <span class="reply-label">Reply</span>
                                         </button>
                                         <div class="reply-form">
-                                            <img src="../Courses Page/assets/Avatar-Big.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Avatar-Big.png" alt="Reply">
                                             <textarea placeholder="Answer Here....."></textarea>
                                             <div class="reply-form-actions">
                                                 <button class="btn btn-post" type="button">Post Reply</button>
@@ -724,7 +802,7 @@
                                 </div>
                                 <!-- Comment số 7 -->
                                 <div class="comment" data-comment-id="7" data-page="3">
-                                    <img src="../Courses Page/assets/Avatar-Big.png" alt="">
+                                    <img src="../Courses-Page/assets/Avatar-Big.png" alt="">
                                     <div class="comment-body">
                                         <div class="comment-head">
                                             <h1>Laura Hipster</h1>
@@ -734,11 +812,11 @@
                                             <p>Quisque nec non amet quis. Varius tellus justo odio parturient mauris curabitur lorem in. Pulvinar sit ultrices mi ut eleifend luctus ut. Id sed faucibus bibendum augue id cras purus. At eget euismod cursus non. Molestie dignissim sed volutpat feugiat vel.</p>
                                         </div>
                                         <button class="reply-toggle" type="button">
-                                            <img src="../Courses Page/assets/Reply.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Reply.png" alt="Reply">
                                             <span class="reply-label">Reply</span>
                                         </button>
                                         <div class="reply-form">
-                                            <img src="../Courses Page/assets/Avatar-Big.png" alt="Reply">
+                                            <img src="../Courses-Page/assets/Avatar-Big.png" alt="Reply">
                                             <textarea placeholder="Answer Here....."></textarea>
                                             <div class="reply-form-actions">
                                                 <button class="btn btn-post" type="button">Post Reply</button>
@@ -793,9 +871,9 @@
             <div class="Footer-Mid">
                 <h1>GET HELP</h1>
                 <ul class="Details">
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Latest Articles</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="../Contact-Page/index.html">Contact Us</a></li>
+                    <li><a href="../Blog-Listing/index.html">Latest Articles</a></li>
+                    <li><a href="../FAQ-Page/index.html">FAQ</a></li>
                 </ul>
             </div>
             <div class="Footer-Mid">
