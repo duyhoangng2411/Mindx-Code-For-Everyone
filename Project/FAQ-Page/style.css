@@ -19,17 +19,17 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* navbar */
+/* Navbar */
 .navbar {
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 5px;
 }
 .navbar img {
-    width: 250px;
+    width: 200px;
     height: auto;
 }
 .mid-nav {
@@ -492,6 +492,9 @@ font-family: inherit;
     display: flex;
     flex-direction: column;
     gap: 26px;
+}
+.Footer-Mid ul a:hover {
+    color: orange;
 }
 .Details {
     width: 110px;
