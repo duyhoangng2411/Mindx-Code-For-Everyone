@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
+    <title> All Courses</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -13,16 +13,93 @@
     <div class="navbar">
         <img src="../assets/Navbar/logo.png" alt="">
         <ul class="mid-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Page<span><img src="../assets/Arrow-Down.png" alt=""></span></a></li>
-            <li><a href="#">LearnPress Add-On</a></li>
-            <li><a href="#">Premium Theme</a></li>
+            <li><a href="../index.html" class="auth-trigger">Home</a></li>
+            <li><a href="../Courses-Page/index.html" class="auth-trigger">Courses</a></li>
+            <li><a href="" class="auth-trigger">Blog</a></li>
+            <li class="Page-dropdown">
+                <a href="#" class="auth-trigger">Page<span><img src="../assets/Arrow-Down.png" alt=""></span></a>
+                <ul class="Page-menu">
+                    <li><a href="../Contact-Page/index.html" class="auth-trigger">Contact</a></li>
+                    <li><a href="../FAQ-Page/index.html" class="auth-trigger">FAQ</a></li>
+                    <li><a href="../Error-Page/index.html" class="auth-trigger">Error</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="auth-trigger">LearnPress Add-On</a></li>
+            <li><a href="#" class="auth-trigger">Premium Theme</a></li>
         </ul>
         <div class="right-nav">
-            <p><a href="#">Login</a> / <a href="#">Register</a></p>
+            <button type="button" class="auth-trigger" onclick="openModal('login')">Login / Register</button>
             <span><img src="../assets/Navbar/Kinhlup.png" alt=""></span>
+        </div>
+    </div>
+    <!-- Đăng nhập + Đăng kí -->
+    <!-- Overlay: phủ nền và modal: khung form -->
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <!-- Nút đóng form -->
+            <button type="button" class="close-btn" onclick="closeModal()" aria-label="Đóng">
+                <p>x</p>
+            </button>
+            <div class="tabs">
+                <button type="button" class="tab active" id="tab-login" onclick="switchTab('login')">Đăng nhập</button>
+                <button type="button" class="tab" id="tab-register" onclick="switchTab('register')">Đăng ký</button>
+            </div>
+            <!-- LOGIN PANEL -->
+            <div class="panel active" id="panel-login">
+                <h2>Đăng nhập</h2>
+                <div class="field">
+                    <input type="text" placeholder="Email hoặc tên đăng nhập" id="login-user">
+                    <div class="error-msg">Vui lòng nhập email hoặc tên đăng nhập</div>
+                </div>
+                <div class="field">
+                <input type="password" placeholder="Mật khẩu" id="login-pass">
+                    <button type="button" class="eye" onclick="togglePw('login-pass', this)">
+                        <img src="../assets/lock.png" alt="Hide/Unhide Password">
+                    </button>
+                </div>
+                <div class="row-between">
+                    <label class="remember"><input type="checkbox"> Ghi nhớ đăng nhập</label>
+                    <a href="#" class="forgot-link">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="submit-btn" onclick="fakeSubmit('login')">Đăng nhập</button>
+                <div class="divider">hoặc</div>
+                <div class="social-row">
+                    <button type="button" class="social-btn"><img src="../assets/google.png" alt="Google"></button>
+                    <button type="button" class="social-btn"><img src="../assets/facebook.png" alt="Facebook"></button>
+                </div>
+                <div class="switch-line">
+                    Chưa có tài khoản? <button type="button" onclick="switchTab('register')">Đăng ký ngay</button>
+                </div>
+            </div>
+            <!-- REGISTER PANEL -->
+            <div class="panel" id="panel-register">
+                <h2>Đăng ký</h2>
+                <div class="field">
+                    <input type="email" placeholder="Email" id="reg-email">
+                    <div class="error-msg">Email không hợp lệ</div>
+                </div>
+                <div class="field">
+                    <input type="text" placeholder="Tên đăng nhập" id="reg-username">
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Mật khẩu" id="reg-pass">
+                    <button type="button" class="eye" onclick="togglePw('reg-pass', this)">
+                        <img src="../assets/lock.png" alt="Hide/Unhide Password">
+                    </button>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Xác nhận mật khẩu" id="reg-confirm">
+                    <button type="button" class="eye" onclick="togglePw('reg-confirm', this)">
+                        <img src="../assets/lock.png" alt="Hide/Unhide Password">
+                    </button>
+                    <div class="error-msg">Mật khẩu xác nhận không khớp</div>
+                </div>
+                <p class="terms">Bằng việc đăng ký, bạn đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a> của chúng tôi.</p>
+                <button type="submit" class="submit-btn" onclick="fakeSubmit('register')">Đăng ký</button>
+                <div class="switch-line">
+                    Đã có tài khoản? <button type="button" onclick="switchTab('login')">Đăng nhập</button>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Duong dan -->
@@ -55,12 +132,12 @@
             </div>
             <div class="Course-Left-Content-Holder" id="courseHolder">
                 <!-- Trang 1 -->
-                <div class="Course1-Holder" data-page="1" data-course="Commercial" data-instructor="Kenny White" data-price="Free">
+                <div class="Course1-Holder" data-page="1" data-course="Commercial" data-instructor="Kenny White" data-price="Free" data-review="One stars" data-level="Beginner">
                     <img src="../assets/All Courses/C1.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Office Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -82,12 +159,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="Course1-Holder" data-page="1">
+                <div class="Course1-Holder" data-page="1" data-course="Office" data-instructor="John Doe" data-price="Free" data-review="Five stars" data-level="Expert">
                     <img src="../assets/All Courses/C2.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Shop Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -109,12 +186,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder"data-page="1">
+                <div class="Course1-Holder"data-page="1" data-course="Single family home" data-instructor="Kenny White" data-price="Paid" data-review="Three stars" data-level="Intermidiate">
                     <img src="../assets/All Courses/C3.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Academy Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -136,12 +213,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="1">
+                <div class="Course1-Holder" data-page="1" data-course="Shop" data-instructor="Kenny White" data-price="Free" data-review="Two stars" data-level="Expert">
                     <img src="../assets/All Courses/C4.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Studio Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -163,12 +240,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="1">
+                <div class="Course1-Holder" data-page="1" data-course="Educate" data-instructor="John Doe" data-price="Paid" data-review="Four stars" data-level="Beginner">
                     <img src="../assets/All Courses/C5.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Single home family Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -190,12 +267,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="1">
+                <div class="Course1-Holder" data-page="1" data-course="Academy" data-instructor="Kenny White" data-price="Paid" data-review="Five stars" data-level="Expert">
                     <img src="../assets/All Courses/C6.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Commercial Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -218,12 +295,12 @@
                     </div>    
                 </div>
                 <!-- Trang 2 -->
-                <div class="Course1-Holder" data-page="2">
+                <div class="Course1-Holder" data-page="2" data-course="University" data-instructor="John Doe" data-price="Free" data-review="Two stars" data-level="Beginner">
                     <img src="../assets/All Courses/C6.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an University Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -245,12 +322,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="Course1-Holder" data-page="2">
+                <div class="Course1-Holder" data-page="2" data-course="Shop" data-instructor="Kenny White" data-price="Free" data-review="One stars" data-level="Intermidiate">
                     <img src="../assets/All Courses/C5.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Educate Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -272,12 +349,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="2">
+                <div class="Course1-Holder" data-page="2" data-course="Office" data-instructor="John Doe" data-price="Paid" data-review="Five stars" data-level="Expert">
                     <img src="../assets/All Courses/C4.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Shop Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -299,12 +376,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="2">
+                <div class="Course1-Holder" data-page="2" data-course="University" data-instructor="Kenny White" data-price="Paid" data-review="Three stars" data-level="Beginner">
                     <img src="../assets/All Courses/C3.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Office Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -326,12 +403,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="2">
+                <div class="Course1-Holder" data-page="2" data-course="Single family home" data-instructor="John Doe" data-price="Paid" data-review="Four stars" data-level="Intermidiate">
                     <img src="../assets/All Courses/C2.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Shop Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -353,12 +430,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="2">
+                <div class="Course1-Holder" data-page="2" data-course="Shop" data-instructor="Kenny White" data-price="Free" data-review="Five stars" data-level="Expert">
                     <img src="../assets/All Courses/C1.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Single home family Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -381,12 +458,12 @@
                     </div>    
                 </div>
                 <!-- Trang 3 -->
-                <div class="Course1-Holder" data-page="3">
+                <div class="Course1-Holder" data-page="3" data-course="Studio" data-instructor="John Doe" data-price="Free" data-review="One stars" data-level="Expert">
                     <img src="../assets/All Courses/C2.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Studio Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -408,12 +485,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="Course1-Holder" data-page="3">
+                <div class="Course1-Holder" data-page="3" data-course="Studio" data-instructor="Kenny White" data-price="Free" data-review="Two stars" data-level="Beginner">
                     <img src="../assets/All Courses/C4.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Commercial Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -435,12 +512,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="3">
+                <div class="Course1-Holder" data-page="3" data-course="Office" data-instructor="Kenny White" data-price="Free" data-review="Four stars" data-level="Intermidiate">
                     <img src="../assets/All Courses/C6.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an University Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -462,12 +539,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="3">
+                <div class="Course1-Holder" data-page="3" data-course="Studio" data-instructor="Kenny White" data-price="Paid" data-review="Two stars" data-level="Expert">
                     <img src="../assets/All Courses/C1.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Shop Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -489,12 +566,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="3">
+                <div class="Course1-Holder" data-page="3" data-course="Single family home" data-instructor="Kenny White" data-price="Paid" data-review="Five stars" data-level="Beginner">
                     <img src="../assets/All Courses/C3.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Office Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -516,12 +593,12 @@
                         </div>
                     </div>    
                 </div>
-                <div class="Course1-Holder" data-page="3">
+                <div class="Course1-Holder" data-page="3" data-course="Shop" data-instructor="Kenny White" data-price="Free" data-review="Five stars" data-level="Expert">
                     <img src="../assets/All Courses/C5.png" alt="">
                     <div class="Course1">
                         <div class="Course1-Nav">
                             <p>by Determined-Poitras</p>
-                            <h1>Create an LMS Website with LearnPress</h1>
+                            <h1>Create an Commercial Website with LearnPress</h1>
                         </div>
                         <div class="Course1-Time-Student">
                             <div class="Course1-Time">
@@ -546,11 +623,11 @@
                 <!-- Chon trang -->
                 <div class="Page-Option-Holder">
                     <div class="Page-Option">
-                        <button class="page-btn prev-btn">‹</button>
-                        <button class="page-btn page-num active-page" data-page="1">1</button>
-                        <button class="page-btn page-num" data-page="2">2</button>
-                        <button class="page-btn page-num" data-page="3">3</button>
-                        <button class="page-btn next-btn">›</button>
+                        <button type="button" class="page-btn prev-btn">‹</button>
+                        <button type="button" class="page-btn page-num active-page" data-page="1">1</button>
+                        <button type="button" class="page-btn page-num" data-page="2">2</button>
+                        <button type="button" class="page-btn page-num" data-page="3">3</button>
+                        <button type="button" class="page-btn next-btn">›</button>
                     </div>
                 </div>
             </div>
@@ -613,7 +690,7 @@
                     </li>
                     <li>
                         <label>
-                            <input type="checkbox" value="Universiy">
+                            <input type="checkbox" value="University">
                             <span>Universiy</span>
                         </label>
                         <p class="filter-count">15</p>
@@ -668,35 +745,35 @@
                     <li>
                         <label>
                             <input type="checkbox" value="Five stars">
-                            <span><img src="../Courses Page/assets/5Stars.png" alt="Danh gia sao"></span>
+                            <span><img src="../Courses-Page/assets/5Stars.png" alt="Danh gia sao"></span>
                         </label>
                         <p class="filter-count">15</p>
                     </li>
                     <li>
                         <label>
                             <input type="checkbox" value="Four stars">
-                            <span><img src="../Courses Page/assets/4Stars.png" alt="Danh gia sao"></span>
+                            <span><img src="../Courses-Page/assets/4Stars.png" alt="Danh gia sao"></span>
                         </label>
                         <p class="filter-count">15</p>
                     </li>
                     <li>
                         <label>
                             <input type="checkbox" value="Three stars">
-                            <span><img src="../Courses Page/assets/3Stars.png" alt="Danh gia sao"></span>
+                            <span><img src="../Courses-Page/assets/3Stars.png" alt="Danh gia sao"></span>
                         </label>
                         <p class="filter-count">15</p>
                     </li>
                     <li>
                         <label>
                             <input type="checkbox" value="Two stars">
-                            <span><img src="../Courses Page/assets/2Stars.png" alt="Danh gia sao"></span>
+                            <span><img src="../Courses-Page/assets/2Stars.png" alt="Danh gia sao"></span>
                         </label>
                         <p class="filter-count">15</p>
                     </li>
                     <li>
                         <label>
                             <input type="checkbox" value="One star">
-                            <span><img src="../Courses Page/assets/1Stars.png" alt="Danh gia sao"></span>
+                            <span><img src="../Courses-Page/assets/1Stars.png" alt="Danh gia sao"></span>
                         </label>
                         <p class="filter-count">15</p>
                     </li>
@@ -746,9 +823,9 @@
             <div class="Footer-Mid">
                 <h1>GET HELP</h1>
                 <ul class="Details">
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Latest Articles</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="../Contact-Page/index.html">Contact Us</a></li>
+                    <li><a href="../Blog-Listing/index.html">Latest Articles</a></li>
+                    <li><a href="../FAQ-Page/index.html">FAQ</a></li>
                 </ul>
             </div>
             <div class="Footer-Mid">

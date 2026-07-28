@@ -12,3 +12,14 @@ Contact-Page - checked
 Blog-Listing - checked
 Single-Blog - checked
 
+3.Course:
+data-course="Commercial" , Office, Shop, Educate, Academy, Single family home, Studio, University
+
+data-instructor="Kenny White" , John Doe
+
+data-price="Free", All, Paid
+
+data-review="Five stars",Four stars, Three stars, Two stars, One stars
+
+data-level = "Beginner", Intermidiate , Expert
+

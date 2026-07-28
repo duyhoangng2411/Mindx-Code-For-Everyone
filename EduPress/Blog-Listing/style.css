@@ -415,34 +415,28 @@ font-family: inherit;
     position: absolute;
     left: 1007px;
 }
-.View-Switch {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-#gridBtn img {
-    width: 20px;
-    height: 20px;
-}
-#gridBtn {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    opacity: 1;
-}
+#gridBtn img,
 #listBtn img {
     width: 20px;
     height: 20px;
-}
-#listBtn {
     border: none;
     background: transparent;
     cursor: pointer;
     display: flex;
+    align-items: center;
     justify-content: center;
     opacity: 0.4;
+}
+#gridBtn.active-view img,
+#listBtn.active-view img {
+    opacity: 1;
+}
+.view-btn {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
 }
 /* Noi dung ben trai */
 .Article-Left-Content-Holder {
