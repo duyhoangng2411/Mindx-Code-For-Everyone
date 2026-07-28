@@ -1,0 +1,14 @@
+EduPress
+Homepage - checked
+
+Nav:
+
+1.Page:
+FAQ-Page - checked
+Error-Page - checked
+Contact-Page - checked
+
+2.Blog:
+Blog-Listing - checked
+Single-Blog - checked
+
