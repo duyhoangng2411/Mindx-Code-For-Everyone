@@ -1,3 +1,52 @@
+// Mobile / Tablet Hamburger Menu
+document.addEventListener('DOMContentLoaded', function () {
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const midNav = document.getElementById('midNav');
+const navBackdrop = document.getElementById('navBackdrop');
+
+if (hamburgerBtn && midNav) {
+    hamburgerBtn.addEventListener('click', function () {
+        const isOpen = midNav.classList.toggle('mobile-open');
+        hamburgerBtn.classList.toggle('active', isOpen);
+        hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (navBackdrop) navBackdrop.classList.toggle('open', isOpen);
+        document.body.classList.toggle('no-scroll', isOpen);
+    });
+
+    // Đóng menu khi click ra ngoài (backdrop)
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', function () {
+            midNav.classList.remove('mobile-open');
+            hamburgerBtn.classList.remove('active');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+            navBackdrop.classList.remove('open');
+            document.body.classList.remove('no-scroll');
+        });
+    }
+
+    // Đóng menu khi click vào 1 link thường (không phải nút dropdown "Page")
+    midNav.querySelectorAll('li:not(.Page-dropdown) > a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            midNav.classList.remove('mobile-open');
+            hamburgerBtn.classList.remove('active');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+            if (navBackdrop) navBackdrop.classList.remove('open');
+            document.body.classList.remove('no-scroll');
+        });
+    });
+
+    // Đóng menu khi resize về desktop
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 1024) {
+            midNav.classList.remove('mobile-open');
+            hamburgerBtn.classList.remove('active');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+            if (navBackdrop) navBackdrop.classList.remove('open');
+            document.body.classList.remove('no-scroll');
+        }
+    });
+}
+});
 // Page - Drop Down
 document.addEventListener('DOMContentLoaded', function () {
     const dropdowns = document.querySelectorAll('.mid-nav .Page-dropdown');

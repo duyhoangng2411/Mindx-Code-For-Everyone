@@ -11,6 +11,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
 body {
     width: 100%;
     height: auto;
@@ -18,7 +22,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
+img { max-width: 100%; }
 /* Navbar */
 .navbar {
     width: 100%;
@@ -115,6 +121,41 @@ body {
     text-transform: capitalize;
     color: #000000;
 }
+/* Hamburger (mobile/tablet nav toggle) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1002;
+}
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background: #000000;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+.nav-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 998;
+}
+.nav-backdrop.open { display: block; }
+body.no-scroll { overflow: hidden; }
+
 /* Đăng nhập + Đăng kí */
 .auth-trigger:hover { color: var(--orange); }
 
@@ -1553,4 +1594,264 @@ font-family: inherit;
     letter-spacing: 0%;
     color:#555555 ;
     white-space: nowrap;
+}
+/* ==========================================================================
+   RESPONSIVE - TABLET (<= 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    body { align-items: stretch; }
+
+    /* Navbar */
+    .navbar { padding: 14px 24px; }
+    .navbar img { width: 150px; }
+    .hamburger { display: flex; }
+    .right-nav { gap: 14px; }
+    .right-nav button { font-size: 15px; white-space: nowrap; }
+    .right-nav span img { width: 36px; height: 36px; }
+
+    .mid-nav {
+        position: fixed;
+        top: 0;
+        right: -85%;
+        width: 85%;
+        max-width: 340px;
+        height: 100vh;
+        max-width: 340px;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 90px 28px 28px;
+        box-shadow: -6px 0 24px rgba(0,0,0,0.18);
+        transition: right 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+    }
+    .mid-nav.mobile-open { right: 0; }
+    .mid-nav li { width: 100%; }
+    .mid-nav a {
+        justify-content: flex-start;
+        padding: 14px 0;
+        width: 100%;
+        border-bottom: 1px solid var(--border);
+    }
+    .mid-nav .Page-menu {
+        display: none;
+        position: static;
+        box-shadow: none;
+        padding: 0 0 0 16px;
+        width: 100%;
+    }
+    .mid-nav .Page-dropdown.active .Page-menu { display: block; }
+    .mid-nav .Page-menu li a { padding: 12px 0; border-bottom: none; }
+
+    /* Intro */
+    .intro { min-height: auto; padding: 60px 32px; }
+    .in-de {
+        position: static;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        max-height: none;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+    }
+    .in-de p { font-size: 38px; text-align: center; }
+    .detail { align-items: center; text-align: center; }
+
+    /* Section padding wrapper (fixed-width desktop sections) */
+    .cate, .Course-holder, .Articles, .FeedBacks,
+    .Advertisments-Holder, .Sign-up-Holder, .Theme-Holder, .Footer-Holder,
+    .Number, .Grow-Us {
+        padding: 0 32px;
+    }
+
+    /* Categories */
+    .cate-con { gap: 20px; }
+    .Categories { width: calc(33.333% - 14px); height: 200px; }
+
+    /* Courses */
+    .Course-Detail-Holder { gap: 24px; }
+    .Course-Detail { width: calc(50% - 12px); height: auto; }
+    .Course-Detail > img { width: 100%; height: 220px; object-fit: cover; }
+    .Course-Detail-Class { width: 100%; height: auto; }
+    .Class-Info { width: 100%; height: auto; }
+    .Class-Week-Student { width: auto; }
+    .Line1 { width: 100%; }
+    .Class-Fee { width: 100%; }
+
+    /* Advertisement */
+    .Advertisments { width: 100%; height: auto; padding: 48px 32px; background-position: center; }
+    .Advertisments-Detail { position: static; width: 100%; max-width: 500px; }
+    .Advertisments-Nav, .Advertisments-Content { width: 100%; }
+
+    /* Numbers */
+    .Number { flex-wrap: wrap; gap: 20px; }
+    .Number-Students { width: calc(50% - 10px); height: auto; padding: 30px 0; }
+
+    /* Grow Us */
+    .Grow-Us { flex-direction: column; height: auto; gap: 36px; text-align: center; }
+    .Grow-Us > img { width: 100%; max-width: 480px; height: auto; }
+    .Grow { width: 100%; max-width: 560px; height: auto; align-items: center; }
+    .Grow-Content-Holder { width: 100%; height: auto; align-items: center; }
+    .Grow-Content { width: 100%; height: auto; }
+    .Grow-Content-Certification { width: 100%; height: auto; align-items: center; }
+    .Certification { justify-content: center; }
+
+    /* Theme */
+    .Theme { width: 100%; height: auto; padding: 60px 32px; flex-direction: column; }
+    .Theme-Content { position: static; width: 100%; left: auto; top: auto; }
+    .Theme-Content-P1, .Theme-Content-P2 { width: 100%; height: auto; }
+
+    /* Sign Up */
+    .Sign-Up { width: 100%; height: auto; padding: 40px 32px; background-position: center; margin-top: 60px; }
+    .Sign-Up > img { display: none; }
+    .Sign-Up-Content {
+        position: static; width: 100%; left: auto; top: auto; height: auto;
+        flex-direction: column; align-items: flex-start; gap: 24px;
+    }
+    .Sign-Up-Detail { width: 100%; height: auto; flex-wrap: wrap; }
+    .Sign-Up-Choice { width: 100%; height: auto; flex-wrap: wrap; }
+
+    /* Articles */
+    .Articles-Nav-Left { width: 100%; height: auto; }
+    .Articles-Content { flex-wrap: wrap; justify-content: center; gap: 24px; }
+    .Articles-Name-1 { width: calc(50% - 12px); height: auto; }
+    .Articles-Name-1 > img { width: 100%; height: 220px; }
+    .Articles-Detail-1 { width: 100%; height: auto; }
+
+    /* Footer */
+    .Footer { flex-wrap: wrap; justify-content: center; gap: 40px; padding: 0 32px; }
+    .Footer-Left, .Footer-Mid, .Footer-Right { width: calc(50% - 20px); }
+    .ADDRESS-PHONE { width: 100%; }
+
+    /* Feedbacks */
+    .FeedBacks-TD { width: 100%; padding: 0 32px; }
+    .FeedBacks-Content { flex-wrap: wrap; justify-content: center; padding: 0 32px; }
+    .FeedBacks-1 { width: calc(50% - 15px); height: auto; }
+}
+
+/* ==========================================================================
+RESPONSIVE - MOBILE (<= 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Navbar */
+    .navbar { padding: 12px 16px; }
+    .navbar img { width: 120px; }
+    .right-nav { gap: 10px; }
+    .right-nav button { font-size: 13px; white-space: nowrap; }
+    .right-nav span img { width: 28px; height: 28px; }
+
+    /* Auth modal */
+    .modal { padding: 26px 20px 22px; border-radius: 14px; }
+    .panel h2 { font-size: 20px; }
+
+    /* Intro */
+    .intro { padding: 48px 20px; }
+    .in-de { gap: 18px; }
+    .in-de p { font-size: 28px; }
+    .detail p { font-size: 15px; }
+    .post-btn { width: auto; }
+
+    /* Section padding */
+    .cate, .Course-holder, .Articles, .FeedBacks,
+    .Advertisments-Holder, .Sign-up-Holder, .Theme-Holder, .Footer-Holder,
+    .Number, .Grow-Us {
+        padding: 0 20px;
+        margin-top: 64px;
+    }
+
+    /* Section nav headers (title + button) stack */
+    .cate-nav, .Course-Nav, .Articles-Nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .cate-td h1, .Course-Nav-TD h1, .Articles-Nav-Left h1 { font-size: 26px; }
+    .FeedBacks-TD h1 { font-size: 26px; }
+
+    /* Categories */
+    .cate-con { flex-direction: column; align-items: center; gap: 16px; }
+    .Categories { width: 100%; max-width: 320px; height: 170px; }
+
+    /* Courses */
+    .Course-Detail-Holder { flex-direction: column; align-items: center; gap: 24px; }
+    .Course-Detail { width: 100%; max-width: 400px; }
+
+    /* Advertisement */
+    .Advertisments { padding: 36px 20px; }
+    .Advertisments-Nav h1 { font-size: 26px; }
+
+    /* Numbers */
+    .Number { flex-direction: column; gap: 16px; }
+    .Number-Students { width: 100%; max-width: 320px; }
+
+    /* Grow Us */
+    .Grow-Nav { font-size: 26px; text-align: center; }
+
+    /* Theme */
+    .Theme-Content-P1 h1 { font-size: 24px; }
+    .Theme-Content-P2 p { font-size: 15px; }
+
+    /* Sign Up */
+    .Sign-Up-Detail { flex-direction: column; text-align: center; gap: 16px; }
+    .Sign-Up-Detail h1 { white-space: normal; font-size: 18px; }
+    .Sign-Up-Choice { flex-direction: column; gap: 12px; }
+    .Choice-Student, .Choice-Instructor { width: 100%; text-align: center; }
+
+    /* Articles */
+    .Articles-Content { flex-direction: column; align-items: center; gap: 24px; }
+    .Articles-Name-1 { width: 100%; max-width: 400px; }
+
+    /* Footer */
+    .Footer { flex-direction: column; align-items: center; text-align: center; gap: 32px; }
+    .Footer-Left, .Footer-Mid, .Footer-Right { width: 100%; max-width: 340px; align-items: center; }
+    .Footer-Mid { align-items: center; }
+    .Details { text-align: center; margin: 0 auto; }
+    .SOCIAL-MEDIA { justify-content: center; margin: 0 auto; }
+    .ADDRESS-PHONE { text-align: center; align-items: center; }
+
+    /* Feedbacks */
+    .FeedBacks-Content { flex-direction: column; align-items: center; gap: 20px; }
+    .FeedBacks-1 { width: 100%; max-width: 340px; height: auto; }
+}
+
+/* ==========================================================================
+RESPONSIVE - SMALL MOBILE (<= 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .navbar img { width: 100px; }
+    .navbar { padding: 10px 12px; }
+    .right-nav { gap: 8px; }
+    .right-nav button { font-size: 12px; }
+    .right-nav span img { width: 24px; height: 24px; }
+    .hamburger { width: 22px; height: 16px; }
+
+    .in-de p { font-size: 22px; }
+    .detail p { font-size: 14px; }
+
+    .cate-td h1, .Course-Nav-TD h1, .Articles-Nav-Left h1,
+    .FeedBacks-TD h1, .Advertisments-Nav h1, .Grow-Nav,
+    .Theme-Content-P1 h1 {
+        font-size: 22px;
+    }
+
+    .cate, .Course-holder, .Articles, .FeedBacks,
+    .Advertisments-Holder, .Sign-up-Holder, .Theme-Holder, .Footer-Holder,
+    .Number, .Grow-Us {
+        padding: 0 14px;
+        margin-top: 48px;
+    }
+
+    .btn-all-articles { width: 100%; }
+
+    .Categories, .Course-Detail, .Number-Students, .Articles-Name-1, .FeedBacks-1 {
+        max-width: 100%;
+    }
+
+    .Footer-Left, .Footer-Mid, .Footer-Right { max-width: 100%; }
+
+    .Sign-Up-Detail img { width: 80px; height: 80px; }
 }
